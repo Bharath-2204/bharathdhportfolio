@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Cybersec Dark Theme */
+    --background: 0 0% 7%;
+    --foreground: 142 70% 65%;
+
+    --card: 0 0% 10%;
+    --card-foreground: 142 70% 65%;
+
+    --popover: 0 0% 8%;
+    --popover-foreground: 142 70% 65%;
+
+    /* Matrix Green Primary */
+    --primary: 142 100% 50%;
+    --primary-foreground: 0 0% 0%;
+
+    /* Cyan Accent */
+    --secondary: 180 100% 50%;
+    --secondary-foreground: 0 0% 0%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 142 40% 45%;
+
+    --accent: 180 100% 50%;
+    --accent-foreground: 0 0% 0%;
+
+    /* Red Alert */
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 142 50% 20%;
+    --input: 0 0% 15%;
+    --ring: 142 100% 50%;
+
+    --radius: 0.25rem;
+
+    /* Custom Cybersec Colors */
+    --cyber-green: 142 100% 50%;
+    --cyber-green-dark: 142 80% 35%;
+    --cyber-cyan: 180 100% 50%;
+    --cyber-red: 0 100% 50%;
+    --terminal-bg: 0 0% 5%;
+    --scan-line: 142 100% 50%;
+    
+    /* Glows */
+    --glow-green: 142 100% 50%;
+    --glow-cyan: 180 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
