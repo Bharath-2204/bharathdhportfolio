@@ -98,7 +98,7 @@ const Index = () => {
             {showContent && (
               <div className="space-y-6 animate-fade-in-up">
                 <p className="text-xl md:text-2xl text-muted-foreground">
-                  Penetration Testing • Ethical Hacking • Security Architecture
+                  Ethical Hacking • Security Architecture
                 </p>
                 <p className="text-foreground max-w-2xl mx-auto">
                   Protecting digital assets through comprehensive security assessments, 
