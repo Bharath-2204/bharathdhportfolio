@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { TerminalText } from "@/components/TerminalText";
 import { ProjectCard } from "@/components/ProjectCard";
 import { SkillBadge } from "@/components/SkillBadge";
+import { NavigationMenuLink } from "@/components/ui/navigation-menu";
 import { Shield, Terminal, Lock, Eye, Server, Code, Network, Database, Github, Linkedin, Mail, ExternalLink } from "lucide-react";
 import heroBg from "@/assets/cyber-hero-bg.jpg";
 
@@ -23,6 +24,36 @@ const Index = () => {
     { icon: Network, name: "Incident Response", level: "Advanced" },
     { icon: Database, name: "Data Protection", level: "Expert" },
     { icon: Terminal, name: "Scripting/Automation", level: "Advanced" },
+  ];
+
+  const experiences = [
+    {
+      role: "Senior Security Engineer",
+      company: "Fortress Tech",
+      period: "2023 — Present",
+      highlights: [
+        "Led red-team exercises reducing critical vulnerabilities by 42%",
+        "Architected zero-trust network segments across multi-cloud"
+      ],
+    },
+    {
+      role: "Penetration Tester",
+      company: "ShieldWorks",
+      period: "2020 — 2023",
+      highlights: [
+        "Delivered 60+ assessments covering web, network, and mobile",
+        "Built internal automation toolkit to streamline reporting"
+      ],
+    },
+    {
+      role: "Security Analyst",
+      company: "Vector Labs",
+      period: "2018 — 2020",
+      highlights: [
+        "Implemented SIEM detections for credential abuse and lateral movement",
+        "Ran incident response playbooks cutting MTTR by 35%"
+      ],
+    },
   ];
 
   const projects = [
@@ -65,10 +96,12 @@ const Index = () => {
             </span>
           </div>
           <div className="hidden md:flex gap-6">
-            <a href="#about" className="hover:text-primary transition-colors">./about</a>
-            <a href="#skills" className="hover:text-primary transition-colors">./skills</a>
-            <a href="#projects" className="hover:text-primary transition-colors">./projects</a>
-            <a href="#contact" className="hover:text-primary transition-colors">./contact</a>
+            <NavigationMenuLink href="#about">About</NavigationMenuLink>
+            <NavigationMenuLink href="#experience">Experience</NavigationMenuLink>
+<NavigationMenuLink href="#skills">Skills</NavigationMenuLink>
+<NavigationMenuLink href="#projects">Projects</NavigationMenuLink>
+<NavigationMenuLink href="#contact">Contact</NavigationMenuLink>
+
           </div>
         </div>
       </nav>
@@ -145,6 +178,35 @@ const Index = () => {
                 penetration tests for Fortune 500 companies, securing critical infrastructure 
                 and sensitive data against evolving threats.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Experience Section */}
+      <section id="experience" className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 flex items-center gap-3">
+              <span className="text-primary">&gt;</span> Experience
+              <span className="text-primary animate-blink">_</span>
+            </h2>
+            <div className="space-y-6">
+              {experiences.map((exp) => (
+                <div key={`${exp.role}-${exp.company}`} className="rounded-lg border border-border bg-card/40 p-6">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-3">
+                    <div className="text-xl font-semibold">
+                      {exp.role} <span className="text-primary">@</span> {exp.company}
+                    </div>
+                    <div className="text-muted-foreground">{exp.period}</div>
+                  </div>
+                  <ul className="list-disc list-inside space-y-2 text-foreground/90">
+                    {exp.highlights.map((h) => (
+                      <li key={h}>{h}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
           </div>
         </div>
