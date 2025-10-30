@@ -153,15 +153,13 @@ const Index = () => {
             </h2>
             <div className="space-y-4 text-lg text-foreground/90 leading-relaxed">
               <p>
-                With over 5 years of experience in cybersecurity, I specialize in identifying 
-                and mitigating security vulnerabilities before they can be exploited. My approach 
-                combines technical expertise with strategic thinking to deliver comprehensive 
-                security solutions.
+                I am a dedicated cybersecurity enthusiast currently pursuing a Master’s degree in Cybersecurity at the University of Maryland, College Park. With a strong focus on Red Teaming, OSINT (Open Source Intelligence), and social engineering, I actively develop my practical expertise through a blend of self-study, hands-on labs, and personal projects. These experiences encompass penetration testing, vulnerability assessments, and comprehensive security evaluations—equipping me with solid skills to analyze and mitigate modern cyber threats.
               </p>
               <p>
-                I hold certifications in CEH, OSCP, and CISSP, and have successfully conducted 
-                penetration tests for Fortune 500 companies, securing critical infrastructure 
-                and sensitive data against evolving threats.
+                My passion extends beyond technical proficiency; I am deeply fascinated by crime genres, including real-life crime podcasts and documentaries. Exploring investigative methodologies and the psychological dimensions of criminal behavior fuels my analytical mindset and sharpens my approach to cybersecurity challenges, blending human factors with technical insight.
+              </p>
+              <p>
+                Committed to continuous learning, I am focused on building and optimizing security solutions that anticipate evolving attack vectors while integrating threat intelligence and automated response capabilities. This holistic perspective enables me to contribute meaningfully to defense strategies and incident response frameworks.
               </p>
             </div>
           </div>
