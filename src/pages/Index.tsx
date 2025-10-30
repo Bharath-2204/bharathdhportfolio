@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { TerminalText } from "@/components/TerminalText";
+import { SmoothLink } from "@/components/SmoothLink";
 import { ProjectCard } from "@/components/ProjectCard";
 import { SkillBadge } from "@/components/SkillBadge";
 // Removed NavigationMenuLink to avoid Radix context errors in simple nav
@@ -81,11 +82,11 @@ const Index = () => {
             </span>
           </div>
           <div className="hidden md:flex gap-6">
-            <a className="hover:text-primary" href="#about">About</a>
-            <a className="hover:text-primary" href="#experience">Experience</a>
-            <a className="hover:text-primary" href="#skills">Skills</a>
-            <a className="hover:text-primary" href="#projects">Projects</a>
-            <a className="hover:text-primary" href="#contact">Contact</a>
+            <SmoothLink className="hover:text-primary" to="#about">About</SmoothLink>
+            <SmoothLink className="hover:text-primary" to="#experience">Experience</SmoothLink>
+            <SmoothLink className="hover:text-primary" to="#skills">Skills</SmoothLink>
+            <SmoothLink className="hover:text-primary" to="#projects">Projects</SmoothLink>
+            <SmoothLink className="hover:text-primary" to="#contact">Contact</SmoothLink>
           </div>
         </div>
       </nav>
