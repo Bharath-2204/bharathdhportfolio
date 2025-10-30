@@ -7,6 +7,7 @@ import { SkillBadge } from "@/components/SkillBadge";
 // Removed NavigationMenuLink to avoid Radix context errors in simple nav
 import { Shield, Terminal, Lock, Eye, Server, Code, Network, Database, Github, Linkedin, Mail, ExternalLink } from "lucide-react";
 import heroBg from "@/assets/cyber-hero-bg.jpg";
+import profileImg from "@/assets/profile.jpg";
 
 const Index = () => {
   const [showContent, setShowContent] = useState(false);
@@ -161,6 +162,16 @@ const Index = () => {
               <p>
                 Committed to continuous learning, I am focused on building and optimizing security solutions that anticipate evolving attack vectors while integrating threat intelligence and automated response capabilities. This holistic perspective enables me to contribute meaningfully to defense strategies and incident response frameworks.
               </p>
+            </div>
+            <div className="relative group max-w-md mx-auto">
+            <div className="absolute -inset-1 bg-gradient-to-r from-primary/50 to-accent/50 rounded-full blur opacity-25 group-hover:opacity-75 transition duration-300" />
+            <div className="relative border-2 border-primary/30 rounded-full overflow-hidden aspect-square">
+            <img 
+                    src={profileImg} 
+                    alt="Profile" 
+                    className="w-full h-full object-cover"
+                  />
+            </div>
             </div>
           </div>
         </div>
