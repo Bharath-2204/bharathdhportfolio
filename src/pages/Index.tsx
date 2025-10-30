@@ -152,6 +152,7 @@ const Index = () => {
               <span className="text-primary">&gt;</span> About Me
               <span className="text-primary animate-blink">_</span>
             </h2>
+            <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-4 text-lg text-foreground/90 leading-relaxed">
               <p>
                 I am a dedicated cybersecurity enthusiast currently pursuing a Master’s degree in Cybersecurity at the University of Maryland, College Park. With a strong focus on Red Teaming, OSINT (Open Source Intelligence), and social engineering, I actively develop my practical expertise through a blend of self-study, hands-on labs, and personal projects. These experiences encompass penetration testing, vulnerability assessments, and comprehensive security evaluations—equipping me with solid skills to analyze and mitigate modern cyber threats.
@@ -173,6 +174,7 @@ const Index = () => {
                   />
             </div>
             </div>
+          </div>
           </div>
         </div>
       </section>
