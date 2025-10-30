@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { TerminalText } from "@/components/TerminalText";
 import { ProjectCard } from "@/components/ProjectCard";
 import { SkillBadge } from "@/components/SkillBadge";
-import { NavigationMenuLink } from "@/components/ui/navigation-menu";
+// Removed NavigationMenuLink to avoid Radix context errors in simple nav
 import { Shield, Terminal, Lock, Eye, Server, Code, Network, Database, Github, Linkedin, Mail, ExternalLink } from "lucide-react";
 import heroBg from "@/assets/cyber-hero-bg.jpg";
 
@@ -96,12 +96,11 @@ const Index = () => {
             </span>
           </div>
           <div className="hidden md:flex gap-6">
-            <NavigationMenuLink href="#about">About</NavigationMenuLink>
-            <NavigationMenuLink href="#experience">Experience</NavigationMenuLink>
-<NavigationMenuLink href="#skills">Skills</NavigationMenuLink>
-<NavigationMenuLink href="#projects">Projects</NavigationMenuLink>
-<NavigationMenuLink href="#contact">Contact</NavigationMenuLink>
-
+            <a className="hover:text-primary" href="#about">About</a>
+            <a className="hover:text-primary" href="#experience">Experience</a>
+            <a className="hover:text-primary" href="#skills">Skills</a>
+            <a className="hover:text-primary" href="#projects">Projects</a>
+            <a className="hover:text-primary" href="#contact">Contact</a>
           </div>
         </div>
       </nav>
