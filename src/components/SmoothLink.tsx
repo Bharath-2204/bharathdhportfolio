@@ -12,8 +12,9 @@ export const SmoothLink: React.FC<SmoothLinkProps> = ({ to, children, onClick, .
       const el = document.getElementById(targetId);
       if (el) {
         el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        if (typeof window !== 'undefined') {
-          window.location.hash = to;
+        if (typeof window !== 'undefined' && 'history' in window) {
+          const path = window.location.pathname + to;
+          window.history.replaceState(null, "", path);
         }
       }
     }
