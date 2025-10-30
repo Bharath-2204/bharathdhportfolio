@@ -7,7 +7,7 @@ import { SkillBadge } from "@/components/SkillBadge";
 // Removed NavigationMenuLink to avoid Radix context errors in simple nav
 import { Shield, Terminal, Lock, Eye, Server, Code, Network, Database, Github, Linkedin, Mail, ExternalLink } from "lucide-react";
 import heroBg from "@/assets/cyber-hero-bg.jpg";
-import profileImg from "@/assets/profile.jpg";
+import profileImg from "@/assets/profile.jpeg";
 
 const Index = () => {
   const [showContent, setShowContent] = useState(false);
