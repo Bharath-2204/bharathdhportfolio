@@ -28,30 +28,15 @@ const Index = () => {
 
   const experiences = [
     {
-      role: "Senior Security Engineer",
-      company: "Fortress Tech",
-      period: "2023 — Present",
+      role: "Cybersecurity Intern",
+      company: "ActiveBytes Innovations",
+      period: "Bengaluru, India | January 2024 – June 2024",
       highlights: [
-        "Led red-team exercises reducing critical vulnerabilities by 42%",
-        "Architected zero-trust network segments across multi-cloud"
-      ],
-    },
-    {
-      role: "Penetration Tester",
-      company: "ShieldWorks",
-      period: "2020 — 2023",
-      highlights: [
-        "Delivered 60+ assessments covering web, network, and mobile",
-        "Built internal automation toolkit to streamline reporting"
-      ],
-    },
-    {
-      role: "Security Analyst",
-      company: "Vector Labs",
-      period: "2018 — 2020",
-      highlights: [
-        "Implemented SIEM detections for credential abuse and lateral movement",
-        "Ran incident response playbooks cutting MTTR by 35%"
+        "Architected and deployed a multi-vector honeypot network simulating brute force, phishing, and recon, increasing detection accuracy by 40% in controlled tests",
+        "Designed and integrated automated alerting with centralized log aggregation to optimize SOC workflows and enable real-time threat visibility",
+        "Contributed to development of a proprietary SIEM leveraging ML for anomaly detection and clustering, improving threat intelligence and pattern identification",
+        "Processed and analyzed 50,000+ telemetry events monthly; automated incident prioritization to reduce MTTR by 30% and false positives by 25%",
+        "Collaborated with cross-functional teams, applying cybersecurity and data science methods to mature threat hunting and SOC effectiveness",
       ],
     },
   ];
