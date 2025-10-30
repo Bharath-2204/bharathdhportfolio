@@ -143,7 +143,7 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 bg-card/50">
+      <section id="about" className="py-20 bg-card/50 scroll-mt-24">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-8 flex items-center gap-3">
@@ -168,7 +168,7 @@ const Index = () => {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="py-20">
+      <section id="experience" className="py-20 scroll-mt-24">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-8 flex items-center gap-3">
@@ -197,7 +197,7 @@ const Index = () => {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-20">
+      <section id="skills" className="py-20 scroll-mt-24">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
             <span className="text-primary">&gt;</span> Core Skills
@@ -212,7 +212,7 @@ const Index = () => {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 bg-card/50">
+      <section id="projects" className="py-20 bg-card/50 scroll-mt-24">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
             <span className="text-primary">&gt;</span> Featured Projects
@@ -227,7 +227,7 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20">
+      <section id="contact" className="py-20 scroll-mt-24">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center space-y-8">
             <h2 className="text-3xl md:text-4xl font-bold">
