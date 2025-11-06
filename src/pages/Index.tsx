@@ -3,9 +3,9 @@ import { Button } from "@/components/ui/button";
 import { TerminalText } from "@/components/TerminalText";
 import { SmoothLink } from "@/components/SmoothLink";
 import { ProjectCard } from "@/components/ProjectCard";
-import { SkillBadge } from "@/components/SkillBadge";
 // Removed NavigationMenuLink to avoid Radix context errors in simple nav
-import { Shield, Terminal, Lock, Eye, Server, Code, Network, Database, Github, Linkedin, Mail, ExternalLink } from "lucide-react";
+import { Shield, Terminal, Lock, Eye, Server, Code, Network, Database, Github, Linkedin, Mail, ExternalLink, Cloud, Globe } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 import heroBg from "@/assets/cyber-hero-bg.jpg";
 import profileImg from "@/assets/profile.jpeg";
 
@@ -17,15 +17,37 @@ const Index = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const skills = [
-    { icon: Shield, name: "Penetration Testing", level: "Expert" },
-    { icon: Lock, name: "Network Security", level: "Advanced" },
-    { icon: Eye, name: "Threat Analysis", level: "Expert" },
-    { icon: Server, name: "Server Hardening", level: "Advanced" },
-    { icon: Code, name: "Security Auditing", level: "Expert" },
-    { icon: Network, name: "Incident Response", level: "Advanced" },
-    { icon: Database, name: "Data Protection", level: "Expert" },
-    { icon: Terminal, name: "Scripting/Automation", level: "Advanced" },
+  const skillCategories = [
+    {
+      icon: Code,
+      name: "Languages",
+      skills: ["Python", "C", "Bash", "Rust", "Java", "JavaScript (ReactJS)"]
+    },
+    {
+      icon: Shield,
+      name: "Penetration Testing and Offensive Security",
+      skills: ["Metasploit", "Burp Suite", "OWASP ZAP", "Nmap", "BeEF", "Aircrack-ng", "Mimikatz", "Social Engineer Toolkit (SET)", "Maltego", "Gophish", "DNSrecon", "Autopsy", "Foremost", "Cellebrite"]
+    },
+    {
+      icon: Eye,
+      name: "Security and Monitoring",
+      skills: ["Splunk", "Snort", "Wireshark", "Nessus", "CISCO Packet Tracer", "NIST Framework", "CMMC Framework"]
+    },
+    {
+      icon: Globe,
+      name: "Web Development",
+      skills: ["Flask", "ReactJS", "OpenCV", "Postman API"]
+    },
+    {
+      icon: Database,
+      name: "Databases",
+      skills: ["MySQL", "SQLite", "MongoDB"]
+    },
+    {
+      icon: Cloud,
+      name: "DevOps and Cloud",
+      skills: ["AWS", "Docker", "Jenkins"]
+    },
   ];
 
   const experiences = [
@@ -212,13 +234,34 @@ const Index = () => {
       <section id="skills" className="py-20 scroll-mt-24">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-            <span className="text-primary">&gt;</span> Core Skills
+            <span className="text-primary">&gt;</span> Skills
             <span className="text-primary animate-blink">_</span>
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-            {skills.map((skill) => (
-              <SkillBadge key={skill.name} {...skill} />
-            ))}
+          <div className="max-w-6xl mx-auto space-y-8">
+            {skillCategories.map((category) => {
+              const Icon = category.icon;
+              return (
+                <div key={category.name} className="bg-card/40 border border-border rounded-lg p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <Icon className="w-6 h-6 text-primary" />
+                    <h3 className="text-xl font-semibold font-mono text-foreground">
+                      {category.name}
+                    </h3>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {category.skills.map((skill) => (
+                      <Badge
+                        key={skill}
+                        variant="outline"
+                        className="font-mono text-sm border-primary/30 hover:border-primary hover:bg-primary/10 transition-colors"
+                      >
+                        {skill}
+                      </Badge>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
