@@ -308,19 +308,19 @@ const Index = () => {
             </p>
             <div className="flex gap-6 justify-center flex-wrap">
               <Button variant="terminal" size="lg" asChild>
-                <a href="mailto:contact@cybersec.dev">
+                <a href="mailto:bharhanu@terpmail.umd.edu">
                   <Mail className="w-5 h-5" />
                   Email
                 </a>
               </Button>
               <Button variant="terminal" size="lg" asChild>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/Bharath-2204/" target="_blank" rel="noopener noreferrer">
                   <Github className="w-5 h-5" />
                   GitHub
                 </a>
               </Button>
               <Button variant="terminal" size="lg" asChild>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/bharath-d-h-ba22a2003" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="w-5 h-5" />
                   LinkedIn
                 </a>
