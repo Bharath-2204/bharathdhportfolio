@@ -67,23 +67,21 @@ const Index = () => {
 
   const projects = [
     {
-      title: "Network Vulnerability Scanner",
-      description: "Automated tool for identifying security vulnerabilities in enterprise networks",
-      tags: ["Python", "Nmap", "CVE Database", "Automation"],
-      liveLink: "#",
+      title: "OSINT Command Line Automation Tool",
+      description: "Developed a flexible, script-ready OSINT CLI tool that streamlines cybersecurity investigations and incident response by automating the reputation analysis of domains and IPs using the VirusTotal v2 API. The tool aggregates and analyzes critical threat intelligence—such as threat scores, URLs, passive DNS records, subdomains, and WHOIS data—to accelerate detection of malicious entities. Enhanced with ExifTool integration for forensic metadata extraction from images, it enables comprehensive evidence analysis, supporting digital forensics and threat intelligence workflows with robust reporting capabilities.",
+      tags: ["Python", "CLI", "VirusTotal API", "OSINT", "ExifTool", "Digital Forensics"],
       githubLink: "#",
     },
     {
-      title: "Security Dashboard",
-      description: "Real-time monitoring system for detecting and responding to security threats",
-      tags: ["React", "WebSocket", "ELK Stack", "Visualization"],
-      liveLink: "#",
+      title: "AIDORK",
+      description: "Built a GPT-4-powered utility that generates precise, context-specific Google Dorks from user input, dramatically expanding the ability to uncover exposed personal profiles, sensitive documents, and confidential data online. The tool combines advanced deep scraping capabilities—utilizing Selenium for stealthy, automated extraction from JavaScript-heavy and dynamic sites—with seamless on-the-fly PDF parsing via PyMuPDF, facilitating rapid, scalable analysis across large datasets without requiring file downloads for enhanced operational efficiency and security.",
+      tags: ["Python", "GPT-4", "Google Dorks", "Selenium", "Web Scraping", "PyMuPDF"],
       githubLink: "#",
     },
     {
-      title: "Ethical Hacking Toolkit",
-      description: "Collection of penetration testing scripts and tools for security assessments",
-      tags: ["Bash", "Python", "Metasploit", "Kali Linux"],
+      title: "System Monitoring and Keylogging Tool",
+      description: "Developed a stealthy, Python-based system monitoring and keylogging tool designed to capture a wide range of user and system activities, including keystrokes, clipboard data, screenshots, microphone input, and system metadata, leveraging Pynput, PIL, and Sounddevice libraries. The tool enables secure, real-time remote auditing through integrated smtplib functionality that automates encrypted log and media exfiltration to a controlled server. Packaged as a fully portable Windows executable using PyInstaller, the solution supports seamless deployment without requiring a local Python environment, facilitating rapid and discreet installations for red team operations and forensic investigations.",
+      tags: ["Python", "Pynput", "System Monitoring", "PyInstaller", "Red Team", "Forensics"],
       githubLink: "#",
     },
   ];
