@@ -84,6 +84,24 @@ const Index = () => {
       tags: ["Python", "Pynput", "System Monitoring", "PyInstaller", "Red Team", "Forensics"],
       githubLink: "#",
     },
+    {
+      title: "Unveiling ADHD - ADHD Detection and Comprehensive Care",
+      description: "In our group project on ADHD, we utilized deep learning models for EEG-based detection, alongside traditional assessments like the Stroop and Posner tests. My role focused on developing a Flask-based website, ensuring smooth integration of all components. I also implemented cybersecurity measures, including secure data transmission and encryption, to protect user data. The platform offers more than detection, featuring a bionic generator, text summarizer, and productivity tools, providing comprehensive support for individuals with ADHD.",
+      tags: ["Flask", "Deep Learning", "EEG", "Cybersecurity", "Web Development", "Encryption"],
+      githubLink: "#",
+    },
+    {
+      title: "Real-time Object Measurement",
+      description: "Developed a real-time measurement tool using ArUco markers for accurate object sizing. The app allows users to upload images with known reference objects (circular or rectangular) for precise measurements. It supports both laptop webcams and IP webcams (via an Android app). Gained hands-on experience with OpenCV, ArUco markers, Streamlit, and image processing. Received a certificate from the IEEE Computer Society club upon project completion.",
+      tags: ["OpenCV", "ArUco", "Streamlit", "Image Processing", "Python", "Computer Vision"],
+      githubLink: "#",
+    },
+    {
+      title: "Smart Mobility Stick",
+      description: "Developed a Smart Mobility Stick to assist visually impaired individuals with navigation. The stick features light, water, and proximity sensors integrated with an Arduino Uno microcontroller, along with reflective stickers and warning lights for added safety. My role focused on optimizing the proximity sensor integration. The project received high praise and a perfect score from our professors, highlighting our team's dedication to creating meaningful solutions.",
+      tags: ["Arduino", "Sensors", "Embedded Systems", "IoT", "Hardware", "Microcontrollers"],
+      githubLink: "#",
+    },
   ];
 
   return (
