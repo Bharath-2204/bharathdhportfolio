@@ -70,37 +70,37 @@ const Index = () => {
       title: "OSINT Command Line Automation Tool",
       description: "Developed a flexible, script-ready OSINT CLI tool that streamlines cybersecurity investigations and incident response by automating the reputation analysis of domains and IPs using the VirusTotal v2 API. The tool aggregates and analyzes critical threat intelligence—such as threat scores, URLs, passive DNS records, subdomains, and WHOIS data—to accelerate detection of malicious entities. Enhanced with ExifTool integration for forensic metadata extraction from images, it enables comprehensive evidence analysis, supporting digital forensics and threat intelligence workflows with robust reporting capabilities.",
       tags: ["Python", "CLI", "VirusTotal API", "OSINT", "ExifTool", "Digital Forensics"],
-      githubLink: "#",
+      githubLink: "https://github.com/Bharath-2204/OSINT-Automation-Tool",
     },
     {
       title: "AIDORK",
       description: "Built a GPT-4-powered utility that generates precise, context-specific Google Dorks from user input, dramatically expanding the ability to uncover exposed personal profiles, sensitive documents, and confidential data online. The tool combines advanced deep scraping capabilities—utilizing Selenium for stealthy, automated extraction from JavaScript-heavy and dynamic sites—with seamless on-the-fly PDF parsing via PyMuPDF, facilitating rapid, scalable analysis across large datasets without requiring file downloads for enhanced operational efficiency and security.",
       tags: ["Python", "GPT-4", "Google Dorks", "Selenium", "Web Scraping", "PyMuPDF"],
-      githubLink: "#",
+      githubLink: "https://github.com/Bharath-2204/Dorking-with-AI",
     },
     {
       title: "System Monitoring and Keylogging Tool",
       description: "Developed a stealthy, Python-based system monitoring and keylogging tool designed to capture a wide range of user and system activities, including keystrokes, clipboard data, screenshots, microphone input, and system metadata, leveraging Pynput, PIL, and Sounddevice libraries. The tool enables secure, real-time remote auditing through integrated smtplib functionality that automates encrypted log and media exfiltration to a controlled server. Packaged as a fully portable Windows executable using PyInstaller, the solution supports seamless deployment without requiring a local Python environment, facilitating rapid and discreet installations for red team operations and forensic investigations.",
       tags: ["Python", "Pynput", "System Monitoring", "PyInstaller", "Red Team", "Forensics"],
-      githubLink: "#",
+      githubLink: "https://github.com/Bharath-2204/Python-Keylogger",
     },
     {
       title: "Unveiling ADHD - ADHD Detection and Comprehensive Care",
       description: "In our group project on ADHD, we utilized deep learning models for EEG-based detection, alongside traditional assessments like the Stroop and Posner tests. My role focused on developing a Flask-based website, ensuring smooth integration of all components. I also implemented cybersecurity measures, including secure data transmission and encryption, to protect user data. The platform offers more than detection, featuring a bionic generator, text summarizer, and productivity tools, providing comprehensive support for individuals with ADHD.",
       tags: ["Flask", "Deep Learning", "EEG", "Cybersecurity", "Web Development", "Encryption"],
-      githubLink: "#",
+      githubLink: "https://github.com/Bharath-2204/CapstoneWebsite",
     },
     {
       title: "Real-time Object Measurement",
       description: "Developed a real-time measurement tool using ArUco markers for accurate object sizing. The app allows users to upload images with known reference objects (circular or rectangular) for precise measurements. It supports both laptop webcams and IP webcams (via an Android app). Gained hands-on experience with OpenCV, ArUco markers, Streamlit, and image processing. Received a certificate from the IEEE Computer Society club upon project completion.",
       tags: ["OpenCV", "ArUco", "Streamlit", "Image Processing", "Python", "Computer Vision"],
-      githubLink: "#",
+      githubLink: "https://github.com/Bharath-2204/Real-Time-Object-Measurement-using-OpenCV",
     },
     {
       title: "Smart Mobility Stick",
       description: "Developed a Smart Mobility Stick to assist visually impaired individuals with navigation. The stick features light, water, and proximity sensors integrated with an Arduino Uno microcontroller, along with reflective stickers and warning lights for added safety. My role focused on optimizing the proximity sensor integration. The project received high praise and a perfect score from our professors, highlighting our team's dedication to creating meaningful solutions.",
       tags: ["Arduino", "Sensors", "Embedded Systems", "IoT", "Hardware", "Microcontrollers"],
-      githubLink: "#",
+      githubLink: "https://github.com/Bharath-2204/Smart-Mobility-Stick-for-Visual-Impaired",
     },
   ];
 
