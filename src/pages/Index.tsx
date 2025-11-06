@@ -148,19 +148,17 @@ const Index = () => {
                 <span className="text-primary">$</span> initializing_system...
               </div>
               <h1 className="text-5xl md:text-7xl font-bold">
-                <TerminalText text="SECURITY SPECIALIST" delay={80} />
+                <TerminalText text="CYBERSECURITY ENGINEER" delay={80} />
               </h1>
             </div>
 
             {showContent && (
               <div className="space-y-6 animate-fade-in-up">
                 <p className="text-xl md:text-2xl text-muted-foreground">
-                  Ethical Hacking • Security Architecture
+                  Red Teaming • OSINT Automation • Social Engineering • Forensics
                 </p>
                 <p className="text-foreground max-w-2xl mx-auto">
-                  Protecting digital assets through comprehensive security assessments, 
-                  vulnerability analysis, and proactive threat mitigation. Specializing in 
-                  enterprise network security and advanced penetration testing methodologies.
+                  Focused on red teaming, OSINT, and social engineering, my work involves developing tools and techniques for security investigations, breach analysis, and intelligence gathering. I engage in automating threat detection, researching digital assets, and applying forensic methods to support practical cybersecurity challenges. This approach combines both technical and human factors to improve security outcomes.
                 </p>
                 <div className="flex gap-4 justify-center flex-wrap">
                   <Button variant="cyber" size="lg" asChild>
