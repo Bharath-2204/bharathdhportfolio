@@ -73,6 +73,18 @@ const Index = () => {
       githubLink: "https://github.com/Bharath-2204/OSINT-Automation-Tool",
     },
     {
+      title: "Air-Gapped EASM and Threat Intelligence Platform",
+      description: "Developed an automated External Attack Surface Management (EASM) platform to map corporate infrastructure, discover leaked credentials, and track active malware campaigns. Integrated authenticated REST APIs from GitHub and AlienVault OTX with Python-side data sanitization to reduce public documentation noise and isolate high-fidelity configuration leaks. Implemented an air-gapped threat analysis workflow powered by a local offline LLM (Phi-3 via Ollama) to generate executive security briefings entirely offline, ensuring zero data leakage of sensitive reconnaissance targets to third-party cloud providers. Packaged with a Streamlit web interface for centralized intelligence visualization.",
+      tags: ["Python", "EASM", "Threat Intelligence", "GitHub API", "AlienVault OTX", "Streamlit", "Ollama", "Phi-3"],
+      githubLink: "https://github.com/Bharath-2204/EASM-Dashboard",
+    },
+    {
+      title: "Physical Attack Surface Mapper",
+      description: "Developed an automated reconnaissance utility in Python to map the digital footprint surrounding physical corporate facilities. Correlated precise geographic coordinates with the Shodan and WiGLE APIs to identify exposed internet-facing hardware and high-risk wireless access points within a localized bounding box. Automatically plotted aggregated intelligence onto interactive Folium maps to help red teams and physical penetration testers visualize external security gaps and analyze proximity-based digital entry points prior to on-site engagements.",
+      tags: ["Python", "Shodan API", "WiGLE API", "Folium", "Reconnaissance", "Physical Security"],
+      githubLink: "https://github.com/Bharath-2204/Physical-Attack-Surface-Mapper",
+    },
+    {
       title: "AIDORK",
       description: "Built a GPT-4-powered utility that generates precise, context-specific Google Dorks from user input, dramatically expanding the ability to uncover exposed personal profiles, sensitive documents, and confidential data online. The tool combines advanced deep scraping capabilities—utilizing Selenium for stealthy, automated extraction from JavaScript-heavy and dynamic sites—with seamless on-the-fly PDF parsing via PyMuPDF, facilitating rapid, scalable analysis across large datasets without requiring file downloads for enhanced operational efficiency and security.",
       tags: ["Python", "GPT-4", "Google Dorks", "Selenium", "Web Scraping", "PyMuPDF"],
