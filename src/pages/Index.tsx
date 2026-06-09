@@ -220,7 +220,7 @@ const Index = () => {
                   Threat Intelligence | OSINT | Digital Forensics | Social Engineering
                 </p>
                 <p className="text-foreground max-w-2xl mx-auto">
-                  Focused on red teaming, OSINT, and social engineering, my work involves developing tools and techniques for security investigations, breach analysis, and intelligence gathering. I engage in automating threat detection, researching digital assets, and applying forensic methods to support practical cybersecurity challenges. This approach combines both technical and human factors to improve security outcomes.
+                  Cybersecurity Engineer & OSINT Analyst formulating data-driven security solutions and advanced open-source intelligence. From building custom automated pipelines to delivering actionable investigative intelligence, I engineer tools that map attack surfaces and expose critical threat vectors.
                 </p>
                 <div className="flex gap-4 justify-center flex-wrap">
                   <Button variant="cyber" size="lg" asChild>
