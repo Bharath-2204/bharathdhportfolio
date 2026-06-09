@@ -1,6 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github } from "lucide-react";
+import { BookOpen, ExternalLink, Github } from "lucide-react";
 
 interface ProjectCardProps {
   title: string;
@@ -8,9 +8,10 @@ interface ProjectCardProps {
   tags: string[];
   liveLink?: string;
   githubLink?: string;
+  blogLink?: string;
 }
 
-export const ProjectCard = ({ title, description, tags, liveLink, githubLink }: ProjectCardProps) => {
+export const ProjectCard = ({ title, description, tags, liveLink, githubLink, blogLink }: ProjectCardProps) => {
   return (
     <Card className="group bg-card border-border hover:border-primary transition-all duration-300 hover:shadow-[0_0_20px_hsl(var(--cyber-green)/0.3)]">
       <CardHeader>
@@ -47,6 +48,14 @@ export const ProjectCard = ({ title, description, tags, liveLink, githubLink }: 
               <a href={githubLink} target="_blank" rel="noopener noreferrer">
                 <Github className="w-4 h-4" />
                 Code
+              </a>
+            </Button>
+          )}
+          {blogLink && (
+            <Button variant="ghost" size="sm" asChild>
+              <a href={blogLink} target="_blank" rel="noopener noreferrer">
+                <BookOpen className="w-4 h-4" />
+                Read Article
               </a>
             </Button>
           )}

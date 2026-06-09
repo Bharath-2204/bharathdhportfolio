@@ -4,7 +4,7 @@ import { TerminalText } from "@/components/TerminalText";
 import { SmoothLink } from "@/components/SmoothLink";
 import { ProjectCard } from "@/components/ProjectCard";
 // Removed NavigationMenuLink to avoid Radix context errors in simple nav
-import { Shield, Terminal, Lock, Eye, Server, Code, Network, Database, Github, Linkedin, Mail, ExternalLink, Cloud, Globe } from "lucide-react";
+import { Shield, Terminal, Lock, Eye, Server, Code, Network, Database, Github, Linkedin, Mail, ExternalLink, Cloud, Globe, BookOpen } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import heroBg from "@/assets/cyber-hero-bg.jpg";
 import profileImg from "@/assets/profile.jpeg";
@@ -66,6 +66,12 @@ const Index = () => {
   ];
 
   const projects = [
+    {
+      title: "pfSense & Splunk SIEM Security Lab",
+      description: "Architected and operationalized an isolated, enterprise-grade SOC sandbox on a host-only virtual network (VMnet1) spanning Kali Linux (external threat actor), pfSense Community Edition (perimeter gateway with stateful packet inspection), and Splunk Enterprise on Ubuntu (centralized SIEM). Engineered complete network isolation to contain offensive testing without leaking traffic to the public internet, then deployed Suricata IPS on the pfSense WAN interface in Legacy Mode with automatic snort2c block-table enforcement. Diagnosed and resolved production-class operational failures—including hypervisor subnet misconfiguration that blinded syslog ingestion and RFC 1918 private-network filtering that dropped recon traffic before packets ever reached Suricata. Built an end-to-end telemetry pipeline shipping pfSense filterlog events over UDP 514 into Splunk, authored custom regex field extractions (src_ip, dest_ip) via the Interactive Field Extractor to structure dense comma-delimited logs, and operationalized adversary analytics with SPL queries to rank active threat actors against the perimeter.",
+      tags: ["pfSense", "Suricata", "Splunk", "Syslog", "Kali Linux", "VMware", "IPS", "SIEM"],
+      blogLink: "https://medium.com/@bharhanu",
+    },
     {
       title: "OSINT Command Line Automation Tool",
       description: "Developed a flexible, script-ready OSINT CLI tool that streamlines cybersecurity investigations and incident response by automating the reputation analysis of domains and IPs using the VirusTotal v2 API. The tool aggregates and analyzes critical threat intelligence—such as threat scores, URLs, passive DNS records, subdomains, and WHOIS data—to accelerate detection of malicious entities. Enhanced with ExifTool integration for forensic metadata extraction from images, it enables comprehensive evidence analysis, supporting digital forensics and threat intelligence workflows with robust reporting capabilities.",
@@ -138,6 +144,15 @@ const Index = () => {
             <SmoothLink className="hover:text-primary" to="#skills">Skills</SmoothLink>
             <SmoothLink className="hover:text-primary" to="#projects">Projects</SmoothLink>
             <SmoothLink className="hover:text-primary" to="#contact">Contact</SmoothLink>
+            <a
+              className="hover:text-primary flex items-center gap-1.5"
+              href="https://medium.com/@bharhanu"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <BookOpen className="w-4 h-4" />
+              Blog
+            </a>
           </div>
         </div>
       </nav>
@@ -337,6 +352,12 @@ const Index = () => {
                   LinkedIn
                 </a>
               </Button>
+              <Button variant="terminal" size="lg" asChild>
+                <a href="https://medium.com/@bharhanu" target="_blank" rel="noopener noreferrer">
+                  <BookOpen className="w-5 h-5" />
+                  Medium
+                </a>
+              </Button>
             </div>
           </div>
         </div>
@@ -346,7 +367,15 @@ const Index = () => {
       <footer className="border-t border-border py-8">
         <div className="container mx-auto px-4 text-center">
           <p className="text-muted-foreground font-mono">
-            <span className="text-primary">&gt;</span> Built with security in mind • © 2025
+            <span className="text-primary">&gt;</span> Built with security in mind • © 2025 •{" "}
+            <a
+              href="https://medium.com/@bharhanu"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary transition-colors"
+            >
+              Medium
+            </a>
           </p>
         </div>
       </footer>
