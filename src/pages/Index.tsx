@@ -4,7 +4,7 @@ import { TerminalText } from "@/components/TerminalText";
 import { SmoothLink } from "@/components/SmoothLink";
 import { ProjectCard } from "@/components/ProjectCard";
 // Removed NavigationMenuLink to avoid Radix context errors in simple nav
-import { Shield, Terminal, Lock, Eye, Server, Code, Network, Database, Github, Linkedin, Mail, ExternalLink, Cloud, Globe, BookOpen } from "lucide-react";
+import { Shield, Terminal, Eye, Code, Network, Github, Linkedin, Mail, ExternalLink, Globe, BookOpen, Award, Search, Crosshair } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import heroBg from "@/assets/cyber-hero-bg.jpg";
 import profileImg from "@/assets/profile.jpeg";
@@ -19,49 +19,81 @@ const Index = () => {
 
   const skillCategories = [
     {
-      icon: Code,
-      name: "Languages",
-      skills: ["Python", "C", "Bash", "Rust", "Java", "JavaScript (ReactJS)"]
-    },
-    {
-      icon: Shield,
-      name: "Penetration Testing and Offensive Security",
-      skills: ["Metasploit", "Burp Suite", "OWASP ZAP", "Nmap", "BeEF", "Aircrack-ng", "Mimikatz", "Social Engineer Toolkit (SET)", "Maltego", "Gophish", "DNSrecon", "Autopsy", "Foremost", "Cellebrite"]
-    },
-    {
       icon: Eye,
-      name: "Security and Monitoring",
-      skills: ["Splunk", "Snort", "Wireshark", "Nessus", "CISCO Packet Tracer", "NIST Framework", "CMMC Framework"]
+      name: "SIEM & Log Analysis",
+      skills: ["Splunk", "Windows Event Logs", "Sysmon", "Linux/Bash Log Analysis", "Active Directory"],
+    },
+    {
+      icon: Network,
+      name: "Network Security & Monitoring",
+      skills: ["Wireshark", "Snort", "Firewalls/ACLs", "Web Proxies", "Nessus", "Cisco Packet Tracer"],
+    },
+    {
+      icon: Search,
+      name: "Incident Response & Forensics",
+      skills: ["Autopsy", "Foremost", "Volatility", "Cellebrite", "Phishing Analysis", "Malware Triage"],
     },
     {
       icon: Globe,
-      name: "Web Development",
-      skills: ["Flask", "ReactJS", "OpenCV", "Postman API"]
+      name: "Threat Intelligence",
+      skills: ["MISP", "AlienVault OTX", "VirusTotal", "MITRE ATT&CK", "OSINT Frameworks"],
     },
     {
-      icon: Database,
-      name: "Databases",
-      skills: ["MySQL", "SQLite", "MongoDB"]
+      icon: Crosshair,
+      name: "Offensive Security & Pen Testing",
+      skills: ["Metasploit", "Burp Suite", "OWASP ZAP", "Nmap", "Mimikatz", "Aircrack-ng", "Maltego", "Gophish"],
     },
     {
-      icon: Cloud,
-      name: "DevOps and Cloud",
-      skills: ["AWS", "Docker", "Jenkins"]
+      icon: Shield,
+      name: "Frameworks & Standards",
+      skills: ["NIST RMF", "NIST SP 800-series", "CMMC", "RBAC", "MFA", "Active Directory Principles"],
+    },
+    {
+      icon: Code,
+      name: "Languages & DevOps",
+      skills: ["Python", "Bash", "C", "Java", "SQL", "AWS", "Docker", "Jenkins", "Flask", "ReactJS", "MongoDB"],
     },
   ];
 
   const experiences = [
     {
+      role: "OSINT Analyst",
+      company: "Guardian Group (Project 1591)",
+      period: "Remote, United States | May 2026 – Present",
+      highlights: [
+        "Conducted anti-human-trafficking investigations using OSINT tradecraft and vetted OpSec protocols, producing structured intelligence reports escalated directly to federal law enforcement for case action.",
+        "Verified age indicators by applying open-source research methodologies to analyze 100+ commercial sex advertisements, generating verified identity intelligence that strengthened victim-identification efforts.",
+        "Shortened investigation cycle times by 15% through cross-referencing subject aliases via public records and SOCMINT, compiling comprehensive identity profiles.",
+      ],
+    },
+    {
+      role: "OSINT Analyst",
+      company: "Trace Labs Search Party",
+      period: "Remote, United States | April 2025 – April 2025",
+      highlights: [
+        "Researched 10+ active missing persons cases leveraging open-source intelligence techniques, delivering verified digital-footprint analysis that produced actionable leads submitted to law enforcement.",
+        "Traced subjects' recent digital activities utilizing advanced search operators and reverse image search, uncovering previously unknown associated accounts that generated 5+ new investigative leads.",
+      ],
+    },
+    {
       role: "Cybersecurity Intern",
       company: "ActiveBytes Innovations",
-      period: "Bengaluru, India | January 2024 – June 2024",
+      period: "January 2024 – June 2024",
       highlights: [
-        "Architected and deployed a multi-vector honeypot network simulating brute force, phishing, and recon, increasing detection accuracy by 40% in controlled tests",
-        "Designed and integrated automated alerting with centralized log aggregation to optimize SOC workflows and enable real-time threat visibility",
-        "Contributed to development of a proprietary SIEM leveraging ML for anomaly detection and clustering, improving threat intelligence and pattern identification",
-        "Processed and analyzed 50,000+ telemetry events monthly; automated incident prioritization to reduce MTTR by 30% and false positives by 25%",
-        "Collaborated with cross-functional teams, applying cybersecurity and data science methods to mature threat hunting and SOC effectiveness",
+        "Deployed a honeypot network using custom Python scripts to isolate and log credential-stuffing attack patterns, capturing adversarial TTPs that directly informed a custom SIEM and automated response playbook.",
+        "Configured a data pipeline processing ~50,000 monthly security events with anomaly-detection logic, reducing alert noise by filtering baseline events and surfacing high-priority incidents for the SOC team.",
+        "Built a centralized monitoring dashboard correlating live honeypot triggers with threat intelligence indicators, streamlining the incident triage process and reducing mean time to detection.",
       ],
+    },
+  ];
+
+  const certifications = [
+    {
+      name: "Practical OSINT Research Professional",
+      issuer: "TCM Security",
+      year: "2025",
+      certificateLink: "https://images.credential.net/embed/e6vasrvk_1779115686262.png",
+      blogLink: "https://medium.com/@bharhanu/72-hours-of-practical-infiltration-my-experience-earning-the-porp-certification-0083b4013d8c",
     },
   ];
 
@@ -70,7 +102,7 @@ const Index = () => {
       title: "pfSense & Splunk SIEM Security Lab",
       description: "Architected and operationalized an isolated, enterprise-grade SOC sandbox on a host-only virtual network (VMnet1) spanning Kali Linux (external threat actor), pfSense Community Edition (perimeter gateway with stateful packet inspection), and Splunk Enterprise on Ubuntu (centralized SIEM). Engineered complete network isolation to contain offensive testing without leaking traffic to the public internet, then deployed Suricata IPS on the pfSense WAN interface in Legacy Mode with automatic snort2c block-table enforcement. Diagnosed and resolved production-class operational failures—including hypervisor subnet misconfiguration that blinded syslog ingestion and RFC 1918 private-network filtering that dropped recon traffic before packets ever reached Suricata. Built an end-to-end telemetry pipeline shipping pfSense filterlog events over UDP 514 into Splunk, authored custom regex field extractions (src_ip, dest_ip) via the Interactive Field Extractor to structure dense comma-delimited logs, and operationalized adversary analytics with SPL queries to rank active threat actors against the perimeter.",
       tags: ["pfSense", "Suricata", "Splunk", "Syslog", "Kali Linux", "VMware", "IPS", "SIEM"],
-      blogLink: "https://medium.com/@bharhanu",
+      blogLink: "https://medium.com/@bharhanu/designing-an-isolated-soc-lab-part-1-setting-up-my-perimeter-and-siem-f435cb3c9527",
     },
     {
       title: "OSINT Command Line Automation Tool",
@@ -83,12 +115,14 @@ const Index = () => {
       description: "Developed an automated External Attack Surface Management (EASM) platform to map corporate infrastructure, discover leaked credentials, and track active malware campaigns. Integrated authenticated REST APIs from GitHub and AlienVault OTX with Python-side data sanitization to reduce public documentation noise and isolate high-fidelity configuration leaks. Implemented an air-gapped threat analysis workflow powered by a local offline LLM (Phi-3 via Ollama) to generate executive security briefings entirely offline, ensuring zero data leakage of sensitive reconnaissance targets to third-party cloud providers. Packaged with a Streamlit web interface for centralized intelligence visualization.",
       tags: ["Python", "EASM", "Threat Intelligence", "GitHub API", "AlienVault OTX", "Streamlit", "Ollama", "Phi-3"],
       githubLink: "https://github.com/Bharath-2204/EASM-Dashboard",
+      blogLink: "https://medium.com/@bharhanu/building-a-minimalist-easm-dashboard-with-automated-noise-filtering-and-local-ai-briefings-4c2016c90a02",
     },
     {
       title: "Physical Attack Surface Mapper",
       description: "Developed an automated reconnaissance utility in Python to map the digital footprint surrounding physical corporate facilities. Correlated precise geographic coordinates with the Shodan and WiGLE APIs to identify exposed internet-facing hardware and high-risk wireless access points within a localized bounding box. Automatically plotted aggregated intelligence onto interactive Folium maps to help red teams and physical penetration testers visualize external security gaps and analyze proximity-based digital entry points prior to on-site engagements.",
       tags: ["Python", "Shodan API", "WiGLE API", "Folium", "Reconnaissance", "Physical Security"],
       githubLink: "https://github.com/Bharath-2204/Physical-Attack-Surface-Mapper",
+      blogLink: "https://medium.com/@bharhanu/visualizing-physical-attack-surface-exposure-with-python-wigle-and-shodan-ec66b51df411",
     },
     {
       title: "AIDORK",
@@ -141,6 +175,7 @@ const Index = () => {
           <div className="hidden md:flex gap-6">
             <SmoothLink className="hover:text-primary" to="#about">About</SmoothLink>
             <SmoothLink className="hover:text-primary" to="#experience">Experience</SmoothLink>
+            <SmoothLink className="hover:text-primary" to="#certifications">Certifications</SmoothLink>
             <SmoothLink className="hover:text-primary" to="#skills">Skills</SmoothLink>
             <SmoothLink className="hover:text-primary" to="#projects">Projects</SmoothLink>
             <SmoothLink className="hover:text-primary" to="#contact">Contact</SmoothLink>
@@ -182,7 +217,7 @@ const Index = () => {
             {showContent && (
               <div className="space-y-6 animate-fade-in-up">
                 <p className="text-xl md:text-2xl text-muted-foreground">
-                  Red Teaming • OSINT Automation • Social Engineering • Forensics
+                  Threat Intelligence | OSINT | Digital Forensics | Social Engineering
                 </p>
                 <p className="text-foreground max-w-2xl mx-auto">
                   Focused on red teaming, OSINT, and social engineering, my work involves developing tools and techniques for security investigations, breach analysis, and intelligence gathering. I engage in automating threat detection, researching digital assets, and applying forensic methods to support practical cybersecurity challenges. This approach combines both technical and human factors to improve security outcomes.
@@ -228,13 +263,13 @@ const Index = () => {
               </div>
               <div className="space-y-4 text-lg text-foreground/90 leading-relaxed pr-40 md:pr-48">
                 <p>
-                  I am a dedicated cybersecurity enthusiast currently pursuing a Master's degree in Cybersecurity at the University of Maryland, College Park. With a strong focus on Red Teaming, OSINT (Open Source Intelligence), and social engineering, I actively develop my practical expertise through a blend of self-study, hands-on labs, and personal projects. These experiences encompass penetration testing, vulnerability assessments, and comprehensive security evaluations—equipping me with solid skills to analyze and mitigate modern cyber threats.
+                  I am a Cybersecurity Engineer and OSINT Analyst focused on building tools that turn raw data into actionable intelligence. Having recently earned my Master of Engineering in Cybersecurity from the University of Maryland, my work bridges the gap between proactive threat intelligence and hands-on defense.
                 </p>
                 <p>
-                  My passion extends beyond technical proficiency; I am deeply fascinated by crime genres, including real-life crime podcasts and documentaries. Exploring investigative methodologies and the psychological dimensions of criminal behavior fuels my analytical mindset and sharpens my approach to cybersecurity challenges, blending human factors with technical insight.
+                  Right now, I apply OSINT tradecraft at Guardian Group to support anti-human-trafficking investigations, generating structured intelligence reports escalated directly to federal law enforcement for case action. Whether I'm building custom Python-based honeypots, tracking digital footprints for active missing persons cases, or optimizing SIEM pipelines to process 50,000 monthly security events, I look for ways to engineer smarter solutions.
                 </p>
                 <p>
-                  Committed to continuous learning, I am focused on building and optimizing security solutions that anticipate evolving attack vectors while integrating threat intelligence and automated response capabilities. This holistic perspective enables me to contribute meaningfully to defense strategies and incident response frameworks.
+                  I prefer code over manual clicks. If a security workflow can be automated, like cutting threat indicator lookup times from five minutes to under 30 seconds or integrating local AI models to secure reconnaissance data without risking data leaks, I will build the script to do it.
                 </p>
               </div>
             </div>
@@ -264,6 +299,49 @@ const Index = () => {
                       <li key={h}>{h}</li>
                     ))}
                   </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Certifications Section */}
+      <section id="certifications" className="py-20 bg-card/50 scroll-mt-24">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 flex items-center gap-3">
+              <span className="text-primary">&gt;</span> Certifications
+              <span className="text-primary animate-blink">_</span>
+            </h2>
+            <div className="space-y-6">
+              {certifications.map((cert) => (
+                <div key={cert.name} className="rounded-lg border border-border bg-card/40 p-6">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-4">
+                    <div className="flex items-center gap-3">
+                      <Award className="w-6 h-6 text-primary shrink-0" />
+                      <div>
+                        <div className="text-xl font-semibold">{cert.name}</div>
+                        <div className="text-muted-foreground">
+                          {cert.issuer} • {cert.year}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex gap-3 flex-wrap">
+                    <Button variant="terminal" size="sm" asChild>
+                      <a href={cert.certificateLink} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="w-4 h-4" />
+                        View Certificate
+                      </a>
+                    </Button>
+                    <Button variant="ghost" size="sm" asChild>
+                      <a href={cert.blogLink} target="_blank" rel="noopener noreferrer">
+                        <BookOpen className="w-4 h-4" />
+                        Read Write-Up
+                      </a>
+                    </Button>
+                  </div>
                 </div>
               ))}
             </div>
@@ -367,7 +445,7 @@ const Index = () => {
       <footer className="border-t border-border py-8">
         <div className="container mx-auto px-4 text-center">
           <p className="text-muted-foreground font-mono">
-            <span className="text-primary">&gt;</span> Built with security in mind • © 2025 •{" "}
+            <span className="text-primary">&gt;</span> Built with security in mind • © 2026 •{" "}
             <a
               href="https://medium.com/@bharhanu"
               target="_blank"
