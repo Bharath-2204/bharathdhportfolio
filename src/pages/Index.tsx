@@ -109,6 +109,7 @@ const Index = () => {
       description: "Developed a flexible, script-ready OSINT CLI tool that streamlines cybersecurity investigations and incident response by automating the reputation analysis of domains and IPs using the VirusTotal v2 API. The tool aggregates and analyzes critical threat intelligence—such as threat scores, URLs, passive DNS records, subdomains, and WHOIS data—to accelerate detection of malicious entities. Enhanced with ExifTool integration for forensic metadata extraction from images, it enables comprehensive evidence analysis, supporting digital forensics and threat intelligence workflows with robust reporting capabilities.",
       tags: ["Python", "CLI", "VirusTotal API", "OSINT", "ExifTool", "Digital Forensics"],
       githubLink: "https://github.com/Bharath-2204/OSINT-Automation-Tool",
+      blogLink: "https://medium.com/@bharhanu/building-an-all-in-one-osint-tool-automating-threat-intel-from-the-command-line-a07cce81c578",
     },
     {
       title: "Air-Gapped EASM and Threat Intelligence Platform",
@@ -138,8 +139,8 @@ const Index = () => {
     },
     {
       title: "Unveiling ADHD - ADHD Detection and Comprehensive Care",
-      description: "In our group project on ADHD, we utilized deep learning models for EEG-based detection, alongside traditional assessments like the Stroop and Posner tests. My role focused on developing a Flask-based website, ensuring smooth integration of all components. I also implemented cybersecurity measures, including secure data transmission and encryption, to protect user data. The platform offers more than detection, featuring a bionic generator, text summarizer, and productivity tools, providing comprehensive support for individuals with ADHD.",
-      tags: ["Flask", "Deep Learning", "EEG", "Cybersecurity", "Web Development", "Encryption"],
+      description: "This multi-modal web platform integrates interactive neuropsychological screening, an automated EEG classification pipeline, and localized executive functioning tools to provide a data-driven approach to ADHD evaluation and daily management. The backend architecture ingests raw 19-channel EEG signals, pre-processing and extracting 11 quantitative features per channel—including statistical descriptors, entropy, and Hjorth parameters targeted within the theta and beta frequency bands. By validating these spectral-temporal feature matrices across multiple architectures, an optimized convolutional network topology (EEGNet) achieved a 92.91% validation accuracy in distinguishing ADHD profiles from healthy controls. To bridge the gap between objective clinical engineering and day-to-day patient care, the application pairs this deep learning diagnostic engine with digital implementations of behavioral assessments (WHO ASRS, Stroop, and Posner tasks) alongside built-in, privacy-focused productivity aids like a Bionic Reading typography formatter and an extractive text summarizer, all delivered through a desaturated, low-contrast user interface designed specifically to prevent sensory overload.",
+      tags: ["Python", "PyTorch", "EEGNet", "SciPy", "CNN", "SQLite", "Matplotlib", "Web Development"],
       githubLink: "https://github.com/Bharath-2204/CapstoneWebsite",
     },
     {
