@@ -4,7 +4,7 @@ import { TerminalText } from "@/components/TerminalText";
 import { SmoothLink } from "@/components/SmoothLink";
 import { ProjectCard } from "@/components/ProjectCard";
 // Removed NavigationMenuLink to avoid Radix context errors in simple nav
-import { Shield, Terminal, Eye, Code, Network, Github, Linkedin, Mail, ExternalLink, Globe, BookOpen, Award, Search, Crosshair } from "lucide-react";
+import { Shield, Terminal, Eye, Code, Network, Github, Linkedin, Mail, ExternalLink, Globe, BookOpen, Award, Search, Crosshair, Cloud } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import heroBg from "@/assets/cyber-hero-bg.jpg";
 import profileImg from "@/assets/profile.jpeg";
@@ -36,17 +36,22 @@ const Index = () => {
     {
       icon: Globe,
       name: "Threat Intelligence",
-      skills: ["MISP", "AlienVault OTX", "VirusTotal", "MITRE ATT&CK", "OSINT Frameworks"],
+      skills: ["MISP", "AlienVault OTX", "VirusTotal", "MITRE ATT&CK", "OSINT Frameworks", "Maltego"],
     },
     {
       icon: Crosshair,
       name: "Offensive Security & Pen Testing",
-      skills: ["Metasploit", "Burp Suite", "OWASP ZAP", "Nmap", "Mimikatz", "Aircrack-ng", "Maltego", "Gophish"],
+      skills: ["Metasploit", "Burp Suite", "OWASP ZAP", "Nmap", "Mimikatz", "Aircrack-ng", "Gophish"],
     },
     {
       icon: Shield,
       name: "Frameworks & Standards",
       skills: ["NIST RMF", "NIST SP 800-series", "CMMC", "RBAC", "MFA", "Active Directory Principles"],
+    },
+    {
+      icon: Cloud,
+      name: "Cloud & Architecture",
+      skills: ["AWS (EC2, S3, IAM - Coursework)", "Zero Trust Principles"],
     },
     {
       icon: Code,
