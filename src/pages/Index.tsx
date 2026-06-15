@@ -132,6 +132,17 @@ const Index = () => {
       githubLink: "https://github.com/Bharath-2204/Dorking-with-AI",
     },
     {
+      title: "AWS Cloud Security Assessment & Hardening of an E-Commerce Environment",
+      description: "Conducted a comprehensive cloud security assessment and remediation engagement for an AWS-hosted OWASP Juice Shop e-commerce environment. Performed vulnerability analysis across IAM, network security, infrastructure, data protection, and logging controls, identifying critical risks including public-facing services, weak access controls, hardcoded credentials, lack of encryption, insecure network segmentation, and insufficient monitoring. Designed and implemented security hardening measures using AWS-native services, including least-privilege IAM policies, Secrets Manager for credential management, automated EC2 patching, CloudWatch logging, CloudTrail auditing, and KMS-backed encryption. Validated remediation effectiveness through policy simulation, patch compliance testing, log monitoring, and audit trail verification, significantly improving the environment's overall security posture.",
+      highlights: [
+        "Identified and prioritized critical cloud security risks including public subnet exposure, unrestricted network access, weak credential management, and missing monitoring controls.",
+        "Implemented automated EC2 patch management using AWS Systems Manager, successfully deploying 23 security updates through scheduled patch baselines.",
+        "Eliminated hardcoded database credentials by integrating AWS Secrets Manager with least-privilege IAM access controls.",
+        "Strengthened data protection through AWS KMS-backed encryption, centralized logging, CloudTrail auditing, and security monitoring controls.",
+      ],
+      tags: ["AWS", "IAM", "VPC", "Systems Manager", "CloudWatch", "CloudTrail", "KMS", "Secrets Manager", "OWASP", "NIST"],
+    },
+    {
       title: "System Monitoring and Keylogging Tool",
       description: "Developed a stealthy, Python-based system monitoring and keylogging tool designed to capture a wide range of user and system activities, including keystrokes, clipboard data, screenshots, microphone input, and system metadata, leveraging Pynput, PIL, and Sounddevice libraries. The tool enables secure, real-time remote auditing through integrated smtplib functionality that automates encrypted log and media exfiltration to a controlled server. Packaged as a fully portable Windows executable using PyInstaller, the solution supports seamless deployment without requiring a local Python environment, facilitating rapid and discreet installations for red team operations and forensic investigations.",
       tags: ["Python", "Pynput", "System Monitoring", "PyInstaller", "Red Team", "Forensics"],

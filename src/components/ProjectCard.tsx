@@ -6,12 +6,13 @@ interface ProjectCardProps {
   title: string;
   description: string;
   tags: string[];
+  highlights?: string[];
   liveLink?: string;
   githubLink?: string;
   blogLink?: string;
 }
 
-export const ProjectCard = ({ title, description, tags, liveLink, githubLink, blogLink }: ProjectCardProps) => {
+export const ProjectCard = ({ title, description, tags, highlights, liveLink, githubLink, blogLink }: ProjectCardProps) => {
   return (
     <Card className="group bg-card border-border hover:border-primary transition-all duration-300 hover:shadow-[0_0_20px_hsl(var(--cyber-green)/0.3)]">
       <CardHeader>
@@ -24,6 +25,13 @@ export const ProjectCard = ({ title, description, tags, liveLink, githubLink, bl
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
+        {highlights && highlights.length > 0 && (
+          <ul className="list-disc list-inside space-y-2 text-sm text-muted-foreground font-mono">
+            {highlights.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        )}
         <div className="flex flex-wrap gap-2">
           {tags.map((tag) => (
             <span
