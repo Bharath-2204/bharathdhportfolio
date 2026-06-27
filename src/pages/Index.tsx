@@ -405,14 +405,16 @@ const Index = () => {
       {/* Projects Section */}
       <section id="projects" className="py-20 bg-card/50 scroll-mt-24">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-            <span className="text-primary">&gt;</span> Featured Projects
-            <span className="text-primary animate-blink">_</span>
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {projects.map((project) => (
-              <ProjectCard key={project.title} {...project} />
-            ))}
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 flex items-center gap-3">
+              <span className="text-primary">&gt;</span> Featured Projects
+              <span className="text-primary animate-blink">_</span>
+            </h2>
+            <div className="space-y-6">
+              {projects.map((project) => (
+                <ProjectCard key={project.title} {...project} />
+              ))}
+            </div>
           </div>
         </div>
       </section>
