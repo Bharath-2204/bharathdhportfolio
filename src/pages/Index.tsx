@@ -4,10 +4,12 @@ import { TerminalText } from "@/components/TerminalText";
 import { SmoothLink } from "@/components/SmoothLink";
 import { ProjectCard } from "@/components/ProjectCard";
 // Removed NavigationMenuLink to avoid Radix context errors in simple nav
-import { Shield, Terminal, Eye, Code, Network, Github, Linkedin, Mail, ExternalLink, Globe, BookOpen, Award, Search, Crosshair, Cloud } from "lucide-react";
+import { Shield, Terminal, Eye, Code, Network, Github, Linkedin, Mail, ExternalLink, Globe, BookOpen, Award, Search, Crosshair, Cloud, FileDown } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import heroBg from "@/assets/cyber-hero-bg.jpg";
 import profileImg from "@/assets/profile.jpeg";
+
+const resumeUrl = `${import.meta.env.BASE_URL}Bharath_Updated.pdf`;
 
 const Index = () => {
   const [showContent, setShowContent] = useState(false);
@@ -198,6 +200,14 @@ const Index = () => {
             <SmoothLink className="hover:text-primary" to="#contact">Contact</SmoothLink>
             <a
               className="hover:text-primary flex items-center gap-1.5"
+              href={resumeUrl}
+              download="Bharath_Updated.pdf"
+            >
+              <FileDown className="w-4 h-4" />
+              Resume
+            </a>
+            <a
+              className="hover:text-primary flex items-center gap-1.5"
               href="https://medium.com/@bharhanu"
               target="_blank"
               rel="noopener noreferrer"
@@ -244,6 +254,12 @@ const Index = () => {
                     <a href="#projects">
                       <Eye className="w-5 h-5" />
                       View Projects
+                    </a>
+                  </Button>
+                  <Button variant="terminal" size="lg" asChild>
+                    <a href={resumeUrl} download="Bharath_Updated.pdf">
+                      <FileDown className="w-5 h-5" />
+                      Download Resume
                     </a>
                   </Button>
                   <Button variant="terminal" size="lg" asChild>
