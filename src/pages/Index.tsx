@@ -188,7 +188,8 @@ const Index = () => {
           <div className="flex items-center gap-2">
             <Terminal className="w-6 h-6 text-primary animate-glow-pulse" />
             <span className="font-bold text-lg">
-              <span className="text-primary">&gt;</span> CYBERSEC.DEV
+              <span className="text-foreground">CYBERSEC</span>
+              <span className="text-primary">.DEV</span>
             </span>
           </div>
           <div className="hidden md:flex gap-6">
@@ -228,7 +229,8 @@ const Index = () => {
           backgroundPosition: 'center',
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/80 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/95 via-black/85 to-black" />
+        <div className="absolute inset-0 bg-primary/5" />
         
         <div className="container mx-auto px-4 z-10">
           <div className="max-w-4xl mx-auto space-y-6 text-center">
@@ -237,7 +239,10 @@ const Index = () => {
                 <span className="text-primary">$</span> initializing_system...
               </div>
               <h1 className="text-5xl md:text-7xl font-bold">
-                <TerminalText text="CYBERSECURITY ENGINEER" delay={80} />
+                <span className="text-foreground">CYBERSECURITY </span>
+                <span className="text-primary">
+                  <TerminalText text="ENGINEER" delay={80} />
+                </span>
               </h1>
             </div>
 
@@ -281,7 +286,8 @@ const Index = () => {
           <div className="max-w-4xl mx-auto">
             <div className="relative">
               <h2 className="text-3xl md:text-4xl font-bold mb-8 flex items-center gap-3">
-                <span className="text-primary">&gt;</span> About Me
+                <span className="text-foreground">ABOUT </span>
+                <span className="text-primary">ME</span>
                 <span className="text-primary animate-blink">_</span>
               </h2>
               <div className="absolute top-0 right-0 group">
@@ -315,7 +321,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-8 flex items-center gap-3">
-              <span className="text-primary">&gt;</span> Experience
+              <span className="text-foreground">EXPERIENCE</span>
               <span className="text-primary animate-blink">_</span>
             </h2>
             <div className="space-y-6">
@@ -344,7 +350,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-8 flex items-center gap-3">
-              <span className="text-primary">&gt;</span> Certifications
+              <span className="text-foreground">CERTIFICATIONS</span>
               <span className="text-primary animate-blink">_</span>
             </h2>
             <div className="space-y-6">
@@ -386,7 +392,7 @@ const Index = () => {
       <section id="skills" className="py-20 scroll-mt-24">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-            <span className="text-primary">&gt;</span> Skills
+            <span className="text-foreground">SKILLS</span>
             <span className="text-primary animate-blink">_</span>
           </h2>
           <div className="max-w-6xl mx-auto space-y-8">
@@ -423,7 +429,8 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-8 flex items-center gap-3">
-              <span className="text-primary">&gt;</span> Featured Projects
+              <span className="text-foreground">FEATURED </span>
+              <span className="text-primary">PROJECTS</span>
               <span className="text-primary animate-blink">_</span>
             </h2>
             <div className="space-y-6">
@@ -440,7 +447,8 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center space-y-8">
             <h2 className="text-3xl md:text-4xl font-bold">
-              <span className="text-primary">&gt;</span> Get In Touch
+              <span className="text-foreground">GET IN </span>
+              <span className="text-primary">TOUCH</span>
               <span className="text-primary animate-blink">_</span>
             </h2>
             <p className="text-lg text-foreground/90">
@@ -480,7 +488,7 @@ const Index = () => {
       <footer className="border-t border-border py-8">
         <div className="container mx-auto px-4 text-center">
           <p className="text-muted-foreground font-mono">
-            <span className="text-primary">&gt;</span> Built with security in mind • © 2026 •{" "}
+            <span className="text-foreground">Built with security in mind • © 2026 • </span>
             <a
               href="https://medium.com/@bharhanu"
               target="_blank"

@@ -14,7 +14,7 @@ interface ProjectCardProps {
 
 export const ProjectCard = ({ title, description, tags, highlights, liveLink, githubLink, blogLink }: ProjectCardProps) => {
   return (
-    <Card className="group bg-card border-border hover:border-primary transition-all duration-300 hover:shadow-[0_0_20px_hsl(var(--cyber-green)/0.3)]">
+    <Card className="group bg-card border-border hover:border-primary transition-all duration-300 hover:shadow-[0_0_20px_hsl(var(--cyber-accent)/0.3)]">
       <CardHeader>
         <CardTitle className="font-mono text-xl flex items-center gap-2">
           <span className="text-primary">&gt;</span>

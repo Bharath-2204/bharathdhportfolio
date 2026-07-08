@@ -100,10 +100,10 @@ export default {
         },
         "glow-pulse": {
           "0%, 100%": { 
-            boxShadow: "0 0 5px hsl(var(--cyber-green)), 0 0 10px hsl(var(--cyber-green))" 
+            boxShadow: "0 0 5px hsl(var(--cyber-accent)), 0 0 10px hsl(var(--cyber-accent))" 
           },
           "50%": { 
-            boxShadow: "0 0 10px hsl(var(--cyber-green)), 0 0 20px hsl(var(--cyber-green)), 0 0 30px hsl(var(--cyber-green))" 
+            boxShadow: "0 0 10px hsl(var(--cyber-accent)), 0 0 20px hsl(var(--cyber-accent)), 0 0 30px hsl(var(--cyber-accent))" 
           },
         },
       },
