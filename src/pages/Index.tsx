@@ -53,7 +53,7 @@ const Index = () => {
     {
       icon: Cloud,
       name: "Cloud & Architecture",
-      skills: ["AWS (EC2, S3, IAM - Coursework)", "Zero Trust Principles"],
+      skills: ["AWS (EC2, S3, IAM - Coursework)", "Amazon Bedrock", "Zero Trust Principles"],
     },
     {
       icon: Code,
