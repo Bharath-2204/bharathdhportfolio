@@ -126,9 +126,9 @@ const Index = () => {
       blogLink: "https://medium.com/@bharhanu/building-an-all-in-one-osint-tool-automating-threat-intel-from-the-command-line-a07cce81c578",
     },
     {
-      title: "Air-Gapped EASM and Threat Intelligence Platform",
-      description: "Developed an automated External Attack Surface Management (EASM) platform to map corporate infrastructure, discover leaked credentials, and track active malware campaigns. Integrated authenticated REST APIs from GitHub and AlienVault OTX with Python-side data sanitization to reduce public documentation noise and isolate high-fidelity configuration leaks. Implemented an air-gapped threat analysis workflow powered by a local offline LLM (Phi-3 via Ollama) to generate executive security briefings entirely offline, ensuring zero data leakage of sensitive reconnaissance targets to third-party cloud providers. Packaged with a Streamlit web interface for centralized intelligence visualization.",
-      tags: ["Python", "EASM", "Threat Intelligence", "GitHub API", "AlienVault OTX", "Streamlit", "Ollama", "Phi-3"],
+      title: "EASM and Threat Intel Dashboard",
+      description: "Built an automated External Attack Surface Management (EASM) and threat intelligence platform that brings passive reconnaissance into a single analyst workflow. The platform discovers subdomains through Certificate Transparency and HackerTarget, inspects TLS certificates, queries Shodan for exposed infrastructure and ports, and searches public GitHub repositories for potentially sensitive configuration files. Implemented a custom risk scoring engine to prioritize findings based on exposed credentials/configuration files, TLS posture, high-risk ports, and attack-surface breadth. Added AWS Bedrock-powered threat briefings and MITRE ATT&CK mapping using only the telemetry collected by the platform, along with STIX 2.1 and JSON exports for downstream SIEM, SOAR, or threat intelligence workflows. Built the interface in Streamlit with concurrent reconnaissance tasks to reduce overall scan time.",
+      tags: ["Python", "Streamlit", "AWS Bedrock", "GitHub API", "Shodan API", "HackerTarget", "crt.sh", "MITRE ATT&CK", "STIX 2.1", "REST APIs"],
       githubLink: "https://github.com/Bharath-2204/EASM-Dashboard",
       blogLink: "https://medium.com/@bharhanu/building-a-minimalist-easm-dashboard-with-automated-noise-filtering-and-local-ai-briefings-4c2016c90a02",
     },
