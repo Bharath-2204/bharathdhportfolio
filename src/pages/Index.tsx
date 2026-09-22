@@ -9,7 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import heroBg from "@/assets/cyber-hero-bg.jpg";
 import profileImg from "@/assets/profile.jpeg";
 
-const resumeUrl = `${import.meta.env.BASE_URL}Bharath_Updated.pdf`;
+const resumeUrl = `${import.meta.env.BASE_URL}Bharath_Updated_V2.pdf`;
 
 const Index = () => {
   const [showContent, setShowContent] = useState(false);
@@ -222,7 +222,7 @@ const Index = () => {
             <a
               className="hover:text-primary flex items-center gap-1.5"
               href={resumeUrl}
-              download="Bharath_Updated.pdf"
+              download="Bharath_Updated_V2.pdf"
             >
               <FileDown className="w-4 h-4" />
               Resume
@@ -282,7 +282,7 @@ const Index = () => {
                     </a>
                   </Button>
                   <Button variant="terminal" size="lg" asChild>
-                    <a href={resumeUrl} download="Bharath_Updated.pdf">
+                    <a href={resumeUrl} download="Bharath_Updated_V2.pdf">
                       <FileDown className="w-5 h-5" />
                       Download Resume
                     </a>
