@@ -62,7 +62,30 @@ const Index = () => {
     },
   ];
 
-  const experiences = [
+  const professionalExperiences = [
+    {
+      role: "Vulnerability Management Analyst",
+      company: "Resilience, Inc",
+      period: "Remote, United States | September 2026 – Present",
+      highlights: [
+        "Conduct routine vulnerability assessments and automated security scans across organizational assets, analyzing scan telemetry to identify critical software flaws, unpatched vulnerabilities, and system misconfigurations.",
+        "Triage and prioritize identified vulnerabilities (CVEs) by evaluating CVSS base scores, asset criticality, and active threat intelligence indicators to accelerate risk reduction across high-exposure systems.",
+        "Partner with cross-functional IT and system administration teams to track remediation lifecycles, verify applied patches, and enforce security-hardening baselines across infrastructure.",
+      ],
+    },
+    {
+      role: "Cybersecurity Intern",
+      company: "ActiveBytes Innovations",
+      period: "January 2024 – June 2024",
+      highlights: [
+        "Deployed a multi-node honeypot network using custom Python scripts, capturing credential-stuffing attempts and mapping 15+ adversarial TTPs to MITRE ATT&CK for automated response integration.",
+        "Engineered a custom Python log-parsing pipeline with anomaly-detection logic, reducing alert noise by ~55% by filtering benign baseline events and surfacing higher-priority incidents for SOC triage.",
+        "Built a centralized monitoring dashboard correlating live honeypot triggers with threat intelligence indicators, reducing MTTD by ~25% and cutting analyst triage time by ~60% during testing.",
+      ],
+    },
+  ];
+
+  const volunteerExperiences = [
     {
       role: "OSINT Analyst",
       company: "Guardian Group (Project 1591)",
@@ -80,16 +103,6 @@ const Index = () => {
       highlights: [
         "Researched 10+ active missing persons cases leveraging open-source intelligence techniques, delivering verified digital-footprint analysis that produced actionable leads submitted to law enforcement.",
         "Traced subjects' recent digital activities utilizing advanced search operators and reverse image search, uncovering previously unknown associated accounts that generated 5+ new investigative leads.",
-      ],
-    },
-    {
-      role: "Cybersecurity Intern",
-      company: "ActiveBytes Innovations",
-      period: "January 2024 – June 2024",
-      highlights: [
-        "Deployed a honeypot network using custom Python scripts to isolate and log credential-stuffing attack patterns, capturing adversarial TTPs that directly informed a custom SIEM and automated response playbook.",
-        "Configured a data pipeline processing ~50,000 monthly security events with anomaly-detection logic, reducing alert noise by filtering baseline events and surfacing high-priority incidents for the SOC team.",
-        "Built a centralized monitoring dashboard correlating live honeypot triggers with threat intelligence indicators, streamlining the incident triage process and reducing mean time to detection.",
       ],
     },
   ];
@@ -201,7 +214,7 @@ const Index = () => {
           </div>
           <div className="hidden md:flex gap-6">
             <SmoothLink className="hover:text-primary" to="#about">About</SmoothLink>
-            <SmoothLink className="hover:text-primary" to="#experience">Experience</SmoothLink>
+            <SmoothLink className="hover:text-primary" to="#experience">Professional Experience</SmoothLink>
             <SmoothLink className="hover:text-primary" to="#certifications">Certifications</SmoothLink>
             <SmoothLink className="hover:text-primary" to="#skills">Skills</SmoothLink>
             <SmoothLink className="hover:text-primary" to="#projects">Projects</SmoothLink>
@@ -323,16 +336,45 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Experience Section */}
+      {/* Professional Experience Section */}
       <section id="experience" className="py-20 scroll-mt-24">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-8 flex items-center gap-3">
-              <span className="text-foreground">EXPERIENCE</span>
+              <span className="text-foreground">PROFESSIONAL EXPERIENCE</span>
               <span className="text-primary animate-blink">_</span>
             </h2>
             <div className="space-y-6">
-              {experiences.map((exp) => (
+              {professionalExperiences.map((exp) => (
+                <div key={`${exp.role}-${exp.company}`} className="rounded-lg border border-border bg-card/40 p-6">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-3">
+                    <div className="text-xl font-semibold">
+                      {exp.role} <span className="text-primary">@</span> {exp.company}
+                    </div>
+                    <div className="text-muted-foreground">{exp.period}</div>
+                  </div>
+                  <ul className="list-disc list-inside space-y-2 text-foreground/90">
+                    {exp.highlights.map((h) => (
+                      <li key={h}>{h}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Volunteer Experience Section */}
+      <section id="volunteer-experience" className="py-20 scroll-mt-24">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 flex items-center gap-3">
+              <span className="text-foreground">VOLUNTEER EXPERIENCE</span>
+              <span className="text-primary animate-blink">_</span>
+            </h2>
+            <div className="space-y-6">
+              {volunteerExperiences.map((exp) => (
                 <div key={`${exp.role}-${exp.company}`} className="rounded-lg border border-border bg-card/40 p-6">
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-3">
                     <div className="text-xl font-semibold">
