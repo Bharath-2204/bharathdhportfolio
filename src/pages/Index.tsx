@@ -74,7 +74,7 @@ const Index = () => {
       ],
     },
     {
-      role: "Cybersecurity Intern",
+      role: "Cybersecurity Analyst",
       company: "ActiveBytes Innovations",
       period: "January 2024 – June 2024",
       highlights: [
