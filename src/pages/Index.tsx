@@ -322,13 +322,13 @@ const Index = () => {
               </div>
               <div className="space-y-4 text-lg text-foreground/90 leading-relaxed pr-40 md:pr-48">
                 <p>
-                  I am a Cybersecurity Engineer and OSINT Analyst focused on building tools that turn raw data into actionable intelligence. Having recently earned my Master of Engineering in Cybersecurity from the University of Maryland, my work bridges the gap between proactive threat intelligence and hands-on defense.
+                  I am a Cybersecurity Engineer currently working as a Vulnerability Management Analyst at Resilience, Inc., where I focus on finding infrastructure weaknesses before attackers do. My day-to-day focus is on practical infrastructure security. Running vulnerability scans across enterprise endpoints, triaging incoming CVEs against threat reports, and coordinating with IT teams to track patch deployment and system hardening.
                 </p>
                 <p>
-                  Right now, I apply OSINT tradecraft at Guardian Group to support anti-human-trafficking investigations, generating structured intelligence reports escalated directly to federal law enforcement for case action. Whether I'm building custom Python-based honeypots, tracking digital footprints for active missing persons cases, or optimizing SIEM pipelines to process 50,000 monthly security events, I look for ways to engineer smarter solutions.
+                  I hold a Master of Engineering in Cybersecurity from the University of Maryland, and my approach to security is simple: if a task is repetitive, write code to automate it.
                 </p>
                 <p>
-                  I prefer code over manual clicks. If a security workflow can be automated, like cutting threat indicator lookup times from five minutes to under 30 seconds or integrating local AI models to secure reconnaissance data without risking data leaks, I will build the script to do it.
+                  Whether I'm building AI-driven threat intelligence tools using Amazon Bedrock, writing custom Python scripts to parse log telemetry, or setting up honeypots to capture live attack patterns, I am driven by practical, hands-on defense. I enjoy taking complex, messy threat data and engineering clean, automated workflows that keep enterprise networks secure.
                 </p>
               </div>
             </div>
