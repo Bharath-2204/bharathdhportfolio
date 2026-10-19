@@ -120,64 +120,108 @@ const Index = () => {
   const projects = [
     {
       title: "Ugroza: AI-Assisted Threat Intelligence Platform",
-      description: "Ugroza is a production-oriented Cyber Threat Intelligence (CTI) platform built to automate threat actor research and reduce hours of manual intelligence gathering into under four minutes. Instead of pivoting across vendor reports, government advisories, and the MITRE ATT&CK framework, the platform collects intelligence from trusted sources, normalizes unstructured OSINT, enriches it with ATT&CK mappings, and generates structured, source-backed threat dossiers using Amazon Bedrock (Llama 3.1). The platform follows a modular architecture with dedicated scraping, processing, persistence, and presentation layers built using Python, Streamlit, and SQLite. To eliminate AI hallucinations, every generated dossier is paired with the exact source material used during analysis, creating a complete audit trail that allows findings to be independently verified. Features such as configurable search depth, intelligent caching, defensive JSON parsing, and secure credential management make the platform suitable for practical security research rather than simple demonstrations.",
+      highlights: [
+        "Built a production-oriented CTI platform that automates threat actor research, cutting hours of manual intelligence gathering down to under four minutes.",
+        "Collects intelligence from trusted sources, normalizes unstructured OSINT, enriches it with MITRE ATT&CK mappings, and generates source-backed dossiers via Amazon Bedrock (Llama 3.1).",
+        "Modular Python/Streamlit/SQLite architecture with scraping, processing, persistence, and presentation layers.",
+        "Pairs every dossier with exact source material to eliminate hallucinations and create a verifiable audit trail.",
+        "Supports configurable search depth, intelligent caching, defensive JSON parsing, and secure credential management for practical security research.",
+      ],
       tags: ["Python", "Streamlit", "AWS Bedrock", "Llama 3.1", "SQLite", "MITRE ATT&CK", "REST APIs", "Regex", "JSON", "OSINT"],
       githubLink: "https://github.com/Bharath-2204/Ugroza-A-Threat-Intelligence-Engine",
       blogLink: "https://medium.com/@bharhanu/ugroza-turning-osint-into-actionable-threat-intelligence-22cb75567c2c",
     },
     {
       title: "pfSense & Splunk SIEM Security Lab",
-      description: "Architected and operationalized an isolated, enterprise-grade SOC sandbox on a host-only virtual network (VMnet1) spanning Kali Linux (external threat actor), pfSense Community Edition (perimeter gateway with stateful packet inspection), and Splunk Enterprise on Ubuntu (centralized SIEM). Engineered complete network isolation to contain offensive testing without leaking traffic to the public internet, then deployed Suricata IPS on the pfSense WAN interface in Legacy Mode with automatic snort2c block-table enforcement. Diagnosed and resolved production-class operational failures—including hypervisor subnet misconfiguration that blinded syslog ingestion and RFC 1918 private-network filtering that dropped recon traffic before packets ever reached Suricata. Built an end-to-end telemetry pipeline shipping pfSense filterlog events over UDP 514 into Splunk, authored custom regex field extractions (src_ip, dest_ip) via the Interactive Field Extractor to structure dense comma-delimited logs, and operationalized adversary analytics with SPL queries to rank active threat actors against the perimeter.",
+      highlights: [
+        "Architected an isolated SOC sandbox on a host-only network spanning Kali Linux, pfSense, and Splunk Enterprise on Ubuntu.",
+        "Deployed Suricata IPS on the pfSense WAN interface with automatic snort2c block-table enforcement.",
+        "Diagnosed production-class failures including hypervisor subnet misconfiguration and RFC 1918 filtering that dropped recon traffic.",
+        "Built an end-to-end syslog telemetry pipeline into Splunk with custom regex field extractions for src_ip and dest_ip.",
+        "Operationalized adversary analytics with SPL queries to rank active threat actors against the perimeter.",
+      ],
       tags: ["pfSense", "Suricata", "Splunk", "Syslog", "Kali Linux", "VMware", "IPS", "SIEM"],
       blogLink: "https://medium.com/@bharhanu/designing-an-isolated-soc-lab-part-1-setting-up-my-perimeter-and-siem-f435cb3c9527",
     },
     {
       title: "OSINT Command Line Automation Tool",
-      description: "Developed a flexible, script-ready OSINT CLI tool that streamlines cybersecurity investigations and incident response by automating the reputation analysis of domains and IPs using the VirusTotal v2 API. The tool aggregates and analyzes critical threat intelligence—such as threat scores, URLs, passive DNS records, subdomains, and WHOIS data—to accelerate detection of malicious entities. Enhanced with ExifTool integration for forensic metadata extraction from images, it enables comprehensive evidence analysis, supporting digital forensics and threat intelligence workflows with robust reporting capabilities.",
+      highlights: [
+        "Developed a script-ready OSINT CLI that automates domain and IP reputation analysis via the VirusTotal v2 API.",
+        "Aggregates threat scores, URLs, passive DNS, subdomains, and WHOIS data to accelerate malicious-entity detection.",
+        "Integrated ExifTool for forensic metadata extraction from images to support digital forensics workflows.",
+        "Produces robust reporting suited for cybersecurity investigations and incident response.",
+      ],
       tags: ["Python", "CLI", "VirusTotal API", "OSINT", "ExifTool", "Digital Forensics"],
       githubLink: "https://github.com/Bharath-2204/OSINT-Automation-Tool",
       blogLink: "https://medium.com/@bharhanu/building-an-all-in-one-osint-tool-automating-threat-intel-from-the-command-line-a07cce81c578",
     },
     {
       title: "EASM and Threat Intel Dashboard",
-      description: "Built an automated External Attack Surface Management (EASM) and threat intelligence platform that brings passive reconnaissance into a single analyst workflow. The platform discovers subdomains through Certificate Transparency and HackerTarget, inspects TLS certificates, queries Shodan for exposed infrastructure and ports, and searches public GitHub repositories for potentially sensitive configuration files. Implemented a custom risk scoring engine to prioritize findings based on exposed credentials/configuration files, TLS posture, high-risk ports, and attack-surface breadth. Added AWS Bedrock-powered threat briefings and MITRE ATT&CK mapping using only the telemetry collected by the platform, along with STIX 2.1 and JSON exports for downstream SIEM, SOAR, or threat intelligence workflows. Built the interface in Streamlit with concurrent reconnaissance tasks to reduce overall scan time.",
+      highlights: [
+        "Built an automated EASM platform that unifies passive recon: subdomain discovery, TLS inspection, Shodan exposure checks, and GitHub secret hunting.",
+        "Implemented a custom risk scoring engine based on exposed credentials, TLS posture, high-risk ports, and attack-surface breadth.",
+        "Added AWS Bedrock threat briefings and MITRE ATT&CK mapping grounded only in collected telemetry.",
+        "Exports STIX 2.1 and JSON for downstream SIEM, SOAR, or threat intelligence workflows.",
+        "Streamlit UI with concurrent reconnaissance tasks to reduce overall scan time.",
+      ],
       tags: ["Python", "Streamlit", "AWS Bedrock", "GitHub API", "Shodan API", "HackerTarget", "crt.sh", "MITRE ATT&CK", "STIX 2.1", "REST APIs"],
       githubLink: "https://github.com/Bharath-2204/EASM-Dashboard",
       blogLink: "https://medium.com/@bharhanu/building-a-minimalist-easm-dashboard-with-automated-noise-filtering-and-local-ai-briefings-4c2016c90a02",
     },
     {
       title: "Physical Attack Surface Mapper",
-      description: "Developed an automated reconnaissance utility in Python to map the digital footprint surrounding physical corporate facilities. Correlated precise geographic coordinates with the Shodan and WiGLE APIs to identify exposed internet-facing hardware and high-risk wireless access points within a localized bounding box. Automatically plotted aggregated intelligence onto interactive Folium maps to help red teams and physical penetration testers visualize external security gaps and analyze proximity-based digital entry points prior to on-site engagements.",
+      highlights: [
+        "Built a Python recon utility to map the digital footprint around physical corporate facilities.",
+        "Correlated geographic coordinates with Shodan and WiGLE APIs to find exposed hardware and high-risk wireless APs.",
+        "Plotted aggregated intelligence on interactive Folium maps for red teams and physical penetration testers.",
+        "Helps visualize proximity-based digital entry points before on-site engagements.",
+      ],
       tags: ["Python", "Shodan API", "WiGLE API", "Folium", "Reconnaissance", "Physical Security"],
       githubLink: "https://github.com/Bharath-2204/Physical-Attack-Surface-Mapper",
       blogLink: "https://medium.com/@bharhanu/visualizing-physical-attack-surface-exposure-with-python-wigle-and-shodan-ec66b51df411",
     },
     {
       title: "AIDORK",
-      description: "Built a GPT-4-powered utility that generates precise, context-specific Google Dorks from user input, dramatically expanding the ability to uncover exposed personal profiles, sensitive documents, and confidential data online. The tool combines advanced deep scraping capabilities—utilizing Selenium for stealthy, automated extraction from JavaScript-heavy and dynamic sites—with seamless on-the-fly PDF parsing via PyMuPDF, facilitating rapid, scalable analysis across large datasets without requiring file downloads for enhanced operational efficiency and security.",
+      highlights: [
+        "Built a GPT-4 utility that generates precise, context-specific Google Dorks from user input.",
+        "Expands discovery of exposed personal profiles, sensitive documents, and confidential data online.",
+        "Uses Selenium for stealthy extraction from JavaScript-heavy and dynamic sites.",
+        "Parses PDFs on the fly with PyMuPDF for scalable analysis without local file downloads.",
+      ],
       tags: ["Python", "GPT-4", "Google Dorks", "Selenium", "Web Scraping", "PyMuPDF"],
       githubLink: "https://github.com/Bharath-2204/Dorking-with-AI",
     },
     {
       title: "AWS Cloud Security Assessment & Hardening of an E-Commerce Environment",
-      description: "Conducted a comprehensive cloud security assessment and remediation engagement for an AWS-hosted OWASP Juice Shop e-commerce environment. Performed vulnerability analysis across IAM, network security, infrastructure, data protection, and logging controls, identifying critical risks including public-facing services, weak access controls, hardcoded credentials, lack of encryption, insecure network segmentation, and insufficient monitoring. Designed and implemented security hardening measures using AWS-native services, including least-privilege IAM policies, Secrets Manager for credential management, automated EC2 patching, CloudWatch logging, CloudTrail auditing, and KMS-backed encryption. Validated remediation effectiveness through policy simulation, patch compliance testing, log monitoring, and audit trail verification, significantly improving the environment's overall security posture.",
       highlights: [
-        "Identified and prioritized critical cloud security risks including public subnet exposure, unrestricted network access, weak credential management, and missing monitoring controls.",
-        "Implemented automated EC2 patch management using AWS Systems Manager, successfully deploying 23 security updates through scheduled patch baselines.",
-        "Eliminated hardcoded database credentials by integrating AWS Secrets Manager with least-privilege IAM access controls.",
-        "Strengthened data protection through AWS KMS-backed encryption, centralized logging, CloudTrail auditing, and security monitoring controls.",
+        "Assessed and remediated an AWS-hosted OWASP Juice Shop environment across IAM, network, infrastructure, data protection, and logging.",
+        "Identified critical risks including public subnet exposure, unrestricted network access, weak credentials, and missing monitoring.",
+        "Implemented automated EC2 patch management with AWS Systems Manager, deploying 23 security updates via scheduled baselines.",
+        "Eliminated hardcoded database credentials using AWS Secrets Manager with least-privilege IAM.",
+        "Strengthened data protection with KMS encryption, CloudWatch logging, CloudTrail auditing, and security monitoring controls.",
       ],
       tags: ["AWS", "IAM", "VPC", "Systems Manager", "CloudWatch", "CloudTrail", "KMS", "Secrets Manager", "OWASP", "NIST"],
     },
     {
       title: "System Monitoring and Keylogging Tool",
-      description: "Developed a stealthy, Python-based system monitoring and keylogging tool designed to capture a wide range of user and system activities, including keystrokes, clipboard data, screenshots, microphone input, and system metadata, leveraging Pynput, PIL, and Sounddevice libraries. The tool enables secure, real-time remote auditing through integrated smtplib functionality that automates encrypted log and media exfiltration to a controlled server. Packaged as a fully portable Windows executable using PyInstaller, the solution supports seamless deployment without requiring a local Python environment, facilitating rapid and discreet installations for red team operations and forensic investigations.",
+      highlights: [
+        "Developed a Python system monitoring tool capturing keystrokes, clipboard data, screenshots, microphone input, and system metadata.",
+        "Uses Pynput, PIL, and Sounddevice for multi-channel activity collection.",
+        "Automates encrypted log and media exfiltration to a controlled server via smtplib for remote auditing.",
+        "Packaged as a portable Windows executable with PyInstaller for red team and forensic deployment without a local Python runtime.",
+      ],
       tags: ["Python", "Pynput", "System Monitoring", "PyInstaller", "Red Team", "Forensics"],
       githubLink: "https://github.com/Bharath-2204/Python-Keylogger",
     },
     {
       title: "Unveiling ADHD - ADHD Detection and Comprehensive Care",
-      description: "This multi-modal web platform integrates interactive neuropsychological screening, an automated EEG classification pipeline, and localized executive functioning tools to provide a data-driven approach to ADHD evaluation and daily management. The backend architecture ingests raw 19-channel EEG signals, pre-processing and extracting 11 quantitative features per channel—including statistical descriptors, entropy, and Hjorth parameters targeted within the theta and beta frequency bands. By validating these spectral-temporal feature matrices across multiple architectures, an optimized convolutional network topology (EEGNet) achieved a 92.91% validation accuracy in distinguishing ADHD profiles from healthy controls. To bridge the gap between objective clinical engineering and day-to-day patient care, the application pairs this deep learning diagnostic engine with digital implementations of behavioral assessments (WHO ASRS, Stroop, and Posner tasks) alongside built-in, privacy-focused productivity aids like a Bionic Reading typography formatter and an extractive text summarizer, all delivered through a desaturated, low-contrast user interface designed specifically to prevent sensory overload.",
+      highlights: [
+        "Multi-modal web platform combining neuropsychological screening, EEG classification, and executive-functioning tools for ADHD evaluation and care.",
+        "Ingests raw 19-channel EEG signals and extracts 11 quantitative features per channel (statistics, entropy, Hjorth parameters in theta/beta bands).",
+        "Optimized EEGNet convolutional model achieved 92.91% validation accuracy distinguishing ADHD profiles from healthy controls.",
+        "Pairs the diagnostic engine with WHO ASRS, Stroop, and Posner behavioral assessments.",
+        "Includes privacy-focused aids (Bionic Reading formatter, extractive summarizer) in a low-contrast UI designed to reduce sensory overload.",
+      ],
       tags: ["Python", "PyTorch", "EEGNet", "SciPy", "CNN", "SQLite", "Matplotlib", "Web Development"],
       githubLink: "https://github.com/Bharath-2204/CapstoneWebsite",
     },
@@ -312,7 +356,7 @@ const Index = () => {
               </h2>
               <div className="absolute top-0 right-0 group">
                 <div className="absolute -inset-1 bg-gradient-to-r from-primary/50 to-accent/50 rounded-full blur opacity-25 group-hover:opacity-75 transition duration-300" />
-                <div className="relative border-2 border-primary/30 rounded-full overflow-hidden aspect-square w-32 md:w-40">
+                <div className="relative border-2 border-primary/30 rounded-full overflow-hidden aspect-square w-44 md:w-56">
                   <img 
                     src={profileImg} 
                     alt="Profile" 
@@ -320,7 +364,7 @@ const Index = () => {
                   />
                 </div>
               </div>
-              <div className="space-y-4 text-lg text-foreground/90 leading-relaxed pr-40 md:pr-48">
+              <div className="space-y-4 text-lg text-foreground/90 leading-relaxed pr-48 md:pr-64">
                 <p>
                   I am a Cybersecurity Engineer currently working as a Vulnerability Management Analyst at Resilience, Inc., where I focus on finding infrastructure weaknesses before attackers do. My day-to-day focus is on practical infrastructure security. Running vulnerability scans across enterprise endpoints, triaging incoming CVEs against threat reports, and coordinating with IT teams to track patch deployment and system hardening.
                 </p>
@@ -444,14 +488,14 @@ const Index = () => {
             <span className="text-foreground">SKILLS</span>
             <span className="text-primary animate-blink">_</span>
           </h2>
-          <div className="max-w-6xl mx-auto space-y-8">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {skillCategories.map((category) => {
               const Icon = category.icon;
               return (
-                <div key={category.name} className="bg-card/40 border border-border rounded-lg p-6">
+                <div key={category.name} className="bg-card/40 border border-border rounded-lg p-5 h-full">
                   <div className="flex items-center gap-3 mb-4">
-                    <Icon className="w-6 h-6 text-primary" />
-                    <h3 className="text-xl font-semibold font-mono text-foreground">
+                    <Icon className="w-5 h-5 text-primary shrink-0" />
+                    <h3 className="text-base font-semibold font-mono text-foreground leading-snug">
                       {category.name}
                     </h3>
                   </div>
@@ -460,7 +504,7 @@ const Index = () => {
                       <Badge
                         key={skill}
                         variant="outline"
-                        className="font-mono text-sm border-primary/30 hover:border-primary hover:bg-primary/10 transition-colors"
+                        className="font-mono text-xs border-primary/30 hover:border-primary hover:bg-primary/10 transition-colors"
                       >
                         {skill}
                       </Badge>
@@ -476,13 +520,13 @@ const Index = () => {
       {/* Projects Section */}
       <section id="projects" className="py-20 bg-card/50 scroll-mt-24">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-8 flex items-center gap-3">
               <span className="text-foreground">FEATURED </span>
               <span className="text-primary">PROJECTS</span>
               <span className="text-primary animate-blink">_</span>
             </h2>
-            <div className="space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {projects.map((project) => (
                 <ProjectCard key={project.title} {...project} />
               ))}
