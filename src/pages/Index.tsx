@@ -315,9 +315,6 @@ const Index = () => {
                 <p className="text-xl md:text-2xl text-muted-foreground">
                   Threat Intelligence | OSINT | Digital Forensics | Social Engineering
                 </p>
-                <p className="text-foreground max-w-2xl mx-auto">
-                  Cybersecurity Engineer & OSINT Analyst formulating data-driven security solutions and advanced open-source intelligence. From building custom automated pipelines to delivering actionable investigative intelligence, I engineer tools that map attack surfaces and expose critical threat vectors.
-                </p>
                 <div className="flex gap-4 justify-center flex-wrap">
                   <Button variant="cyber" size="lg" asChild>
                     <a href="#projects">
