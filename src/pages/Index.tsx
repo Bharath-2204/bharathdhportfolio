@@ -68,9 +68,9 @@ const Index = () => {
       company: "Resilience, Inc",
       period: "Remote, United States | September 2026 – Present",
       highlights: [
-        "Conduct routine vulnerability assessments and automated security scans across organizational assets, analyzing scan telemetry to identify critical software flaws, unpatched vulnerabilities, and system misconfigurations.",
-        "Triage and prioritize identified vulnerabilities (CVEs) by evaluating CVSS base scores, asset criticality, and active threat intelligence indicators to accelerate risk reduction across high-exposure systems.",
-        "Partner with cross-functional IT and system administration teams to track remediation lifecycles, verify applied patches, and enforce security-hardening baselines across infrastructure.",
+        "Automated enterprise endpoint vulnerability scans using Nessus, analyzing scan telemetry to pinpoint unpatched OS flaws, policy deviations, and system misconfigurations.",
+        "Triaged emerging CVEs by cross-referencing CVSS severity with threat intelligence feeds and asset criticality, accelerating patch prioritization for high-risk systems.",
+        "Tracked patch deployment lifecycles and audited server infrastructure against CIS security benchmarks in close collaboration with system administration teams.",
       ],
     },
     {
