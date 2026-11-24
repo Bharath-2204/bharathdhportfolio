@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { BookOpen, ExternalLink, Github } from "lucide-react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { BookOpen, ExternalLink, Github, Play } from "lucide-react";
 
 interface ProjectCardProps {
   title: string;
@@ -8,11 +9,12 @@ interface ProjectCardProps {
   tags: string[];
   highlights?: string[];
   liveLink?: string;
+  demoVideo?: string;
   githubLink?: string;
   blogLink?: string;
 }
 
-export const ProjectCard = ({ title, description, tags, highlights, liveLink, githubLink, blogLink }: ProjectCardProps) => {
+export const ProjectCard = ({ title, description, tags, highlights, liveLink, demoVideo, githubLink, blogLink }: ProjectCardProps) => {
   return (
     <Card className="group h-full bg-card border-border hover:border-primary transition-all duration-300 hover:shadow-[0_0_20px_hsl(var(--cyber-accent)/0.3)]">
       <CardHeader>
@@ -44,7 +46,23 @@ export const ProjectCard = ({ title, description, tags, highlights, liveLink, gi
             </span>
           ))}
         </div>
-        <div className="flex gap-3">
+        <div className="flex flex-wrap gap-3">
+          {demoVideo && (
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button variant="terminal" size="sm">
+                  <Play className="w-4 h-4" />
+                  Demo
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="max-w-3xl">
+                <DialogHeader>
+                  <DialogTitle className="font-mono">{title} demo</DialogTitle>
+                </DialogHeader>
+                <video src={demoVideo} controls autoPlay className="w-full rounded-md" />
+              </DialogContent>
+            </Dialog>
+          )}
           {liveLink && (
             <Button variant="terminal" size="sm" asChild>
               <a href={liveLink} target="_blank" rel="noopener noreferrer">

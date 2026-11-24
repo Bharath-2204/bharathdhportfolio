@@ -179,6 +179,7 @@ const Index = () => {
       tags: ["Python", "Shodan API", "WiGLE API", "Folium", "Reconnaissance", "Physical Security"],
       githubLink: "https://github.com/Bharath-2204/Physical-Attack-Surface-Mapper",
       blogLink: "https://medium.com/@bharhanu/visualizing-physical-attack-surface-exposure-with-python-wigle-and-shodan-ec66b51df411",
+      demoVideo: `${import.meta.env.BASE_URL}physical_attack_surface_mapper_brag.mp4`,
     },
     {
       title: "AIDORK",
