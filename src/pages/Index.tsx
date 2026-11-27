@@ -119,15 +119,18 @@ const Index = () => {
 
   const projects = [
     {
-      title: "Ugroza: AI-Assisted Threat Intelligence Platform",
+      title: "Ugroza: Evidence-Reviewed Threat Intelligence Engine",
+      description: "Research threat actors, inspect the evidence, and export structured intelligence. Ugroza combines public-source collection, two-model claim extraction and review, MITRE ATT&CK enrichment, and STIX/Navigator exports in a Python research platform.",
       highlights: [
-        "Built a production-oriented CTI platform that automates threat actor research, cutting hours of manual intelligence gathering down to under four minutes.",
-        "Collects intelligence from trusted sources, normalizes unstructured OSINT, enriches it with MITRE ATT&CK mappings, and generates source-backed dossiers via Amazon Bedrock (Llama 3.1).",
-        "Modular Python/Streamlit/SQLite architecture with scraping, processing, persistence, and presentation layers.",
-        "Pairs every dossier with exact source material to eliminate hallucinations and create a verifiable audit trail.",
-        "Supports configurable search depth, intelligent caching, defensive JSON parsing, and secure credential management for practical security research.",
+        "Collects public vendor reporting, government advisories, and technical media, then enriches actor profiles with direct MITRE ATT&CK reference mappings.",
+        "Uses Amazon Nova Micro to extract evidence-linked claims and Mistral Large 3 to review factual support and analytical field classification through Amazon Bedrock.",
+        "Validates claim structure and retained source quotations, excludes invalid findings, and preserves an audit trail for analyst inspection.",
+        "Exports draft STIX 2.1 research bundles and ATT&CK Navigator layers for further analysis.",
+        "Implements configurable research coverage, SQLite-backed research snapshots, and explicit refresh and re-analysis.",
+        "Includes offline regression tests covering evidence validation, classification rules, model-response failures, and export integrity.",
       ],
-      tags: ["Python", "Streamlit", "AWS Bedrock", "Llama 3.1", "SQLite", "MITRE ATT&CK", "REST APIs", "Regex", "JSON", "OSINT"],
+      tags: ["Python", "Streamlit", "Amazon Bedrock", "Amazon Nova Micro", "Mistral Large 3", "SQLite", "MITRE ATT&CK", "STIX 2.1", "ATT&CK Navigator", "OSINT"],
+      demoVideo: `${import.meta.env.BASE_URL}ugroza-technical-demo-narrated.mp4`,
       githubLink: "https://github.com/Bharath-2204/Ugroza-A-Threat-Intelligence-Engine",
       blogLink: "https://medium.com/@bharhanu/ugroza-turning-osint-into-actionable-threat-intelligence-22cb75567c2c",
     },
