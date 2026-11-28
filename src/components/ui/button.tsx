@@ -5,7 +5,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
@@ -15,8 +15,9 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        terminal: "bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 shadow-[0_0_10px_hsl(var(--cyber-accent))] hover:shadow-[0_0_20px_hsl(var(--cyber-accent))]",
-        cyber: "bg-gradient-to-r from-primary to-accent text-primary-foreground font-bold hover:scale-105 transition-transform duration-300 shadow-[0_0_15px_hsl(var(--cyber-accent))]",
+        solid: "bg-primary text-primary-foreground font-semibold hover:bg-[hsl(187_92%_78%)]",
+        line: "border border-border bg-transparent text-foreground hover:border-primary hover:text-primary",
+        quiet: "text-body hover:text-primary px-0",
       },
       size: {
         default: "h-10 px-4 py-2",

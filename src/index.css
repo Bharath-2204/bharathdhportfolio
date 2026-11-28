@@ -2,65 +2,86 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    /* Blue / Black / White Theme */
-    --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
-
-    --card: 0 0% 5%;
-    --card-foreground: 0 0% 100%;
-
-    --popover: 0 0% 4%;
-    --popover-foreground: 0 0% 100%;
-
-    /* Cyan Blue Primary */
-    --primary: 187 100% 50%;
-    --primary-foreground: 0 0% 0%;
-
-    /* Sky Blue Accent */
-    --secondary: 199 89% 55%;
-    --secondary-foreground: 0 0% 0%;
-
-    --muted: 0 0% 12%;
-    --muted-foreground: 0 0% 65%;
-
-    --accent: 199 89% 55%;
-    --accent-foreground: 0 0% 0%;
-
+    --background: 220 49% 8%;   /* #0B1220 */
+    --foreground: 210 40% 96%;  /* #F1F5F9 headings */
+    --body: 214 26% 77%;        /* #B6C3D4 body */
+    --card: 217 46% 12%;        /* #111C2E */
+    --card-foreground: 210 40% 96%;
+    --popover: 217 46% 12%;
+    --popover-foreground: 210 40% 96%;
+    --primary: 187 92% 69%;     /* #67E8F9 */
+    --primary-foreground: 220 49% 8%;
+    --secondary: 217 40% 16%;
+    --secondary-foreground: 210 40% 96%;
+    --muted: 217 40% 16%;
+    --muted-foreground: 215 20% 63%;
+    --accent: 217 40% 16%;
+    --accent-foreground: 210 40% 96%;
     --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
-
-    --border: 200 20% 18%;
-    --input: 0 0% 12%;
-    --ring: 187 100% 50%;
-
-    --radius: 0.25rem;
-
-    /* Custom Accent Colors */
-    --cyber-accent: 187 100% 50%;
-    --cyber-accent-dark: 199 80% 40%;
-    --cyber-cyan: 187 100% 50%;
-    --cyber-red: 0 84% 60%;
-    --terminal-bg: 0 0% 0%;
-    --scan-line: 187 100% 50%;
-    
-    /* Glows */
-    --glow-blue: 187 100% 50%;
-    --glow-cyan: 199 89% 55%;
+    --destructive-foreground: 210 40% 96%;
+    --border: 215 32% 24%;      /* #2A3B52 */
+    --input: 215 32% 24%;
+    --ring: 187 92% 69%;
+    --radius: 0.5rem;
   }
-}
 
-@layer base {
   * {
     @apply border-border;
   }
 
-  body {
-    @apply bg-background text-foreground;
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+    scrollbar-color: hsl(var(--border)) hsl(var(--background));
   }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
+
+  body {
+    @apply bg-background text-body font-sans antialiased;
+    font-feature-settings: "cv11", "ss01";
+    caret-color: hsl(var(--primary));
+  }
+
+  h1, h2, h3, h4 {
+    @apply text-foreground;
+    text-wrap: balance;
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.28);
+    color: hsl(var(--foreground));
+  }
+
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { background: hsl(var(--background)); }
+  ::-webkit-scrollbar-thumb { background: hsl(var(--border)); border-radius: 999px; border: 2px solid hsl(var(--background)); }
+
+  a { text-underline-offset: 0.2em; }
+
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  summary::-webkit-details-marker { display: none; }
+}
+
+@layer components {
+  .tag {
+    @apply inline-flex items-center rounded border border-border px-2 py-0.5 text-xs text-body;
+  }
+}
+
+/* Technical details accordion: panel height (grid rows), visibility and chevron share one timing. */
+.accordion-motion {
+  transition: grid-template-rows 240ms ease-in-out, visibility 240ms ease-in-out, transform 240ms ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .accordion-motion { transition: none; }
 }
